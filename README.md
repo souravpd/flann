@@ -5,7 +5,6 @@ Implemetation of a Social Networking Website
 * Nodejs
 * Expressjs
 * EJS
-* Passport
 
 ### Task List
 - [X] Create Project Structure
