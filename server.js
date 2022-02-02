@@ -4,9 +4,6 @@ const path = require('path');
 const expressLayouts = require('express-ejs-layouts');
 const dotenv = require('dotenv').config();
 
-//Local Imports
-const db = require('./config/db');
-
 //Define Router Files
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
