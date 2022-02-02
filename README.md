@@ -9,7 +9,9 @@ Implemetation of a Social Networking Website
 
 ### Task List
 - [X] Create Project Structure
-- [ ] Implement Authentication
+- [X] Implement Authentication
+- [ ] Implement User Profile
+- [ ] Implement User Update Profile
 - [ ] Implement Friends
 - [ ] Implement Posts
 - [ ] Implement Profile Updates
