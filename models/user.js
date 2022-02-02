@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 
 //Local Imports
 const { pool } = require('../config/db');
-const validate = require('../config/validate');
+const validate = require('../utils/validate');
 
 //SignUp
 module.exports.signUp = function ({
@@ -59,5 +59,17 @@ module.exports.login = function ({ username, password }) {
         } else {
             return reject('Password Incorrect');
         }
+    });
+}
+
+//Get User
+module.exports.getUser = function(username){
+    return new Promise(function(resolve, reject){
+        pool.query(`SELECT username,email,create_time FROM users WHERE username=?` , [username], function(error, results){
+            if(error || results.length == 0){
+                return reject('User Not Found');
+            }
+            return resolve(results[0]);
+        });
     });
 }
