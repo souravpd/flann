@@ -1,7 +1,6 @@
 //Library Imports
 const express = require("express");
 const path = require("path");
-const expressLayouts = require("express-ejs-layouts");
 const dotenv = require("dotenv").config();
 
 //Define Router Files
@@ -14,18 +13,7 @@ const port = process.env.PORT;
 const app = express();
 
 //Parse Incoming Form Data
-app.use(express.urlencoded());
-//Use Static Assets
-app.use(express.static("./assets"));
-app.use(expressLayouts);
-
-// extract style and scripts
-app.set("layout extractStyles", true);
-app.set("layout extractScripts", true);
-
-//Setup View Engine
-app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
+app.use(express.json());
 
 //Define Routes
 app.use("/", indexRouter);
