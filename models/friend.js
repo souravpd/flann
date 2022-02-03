@@ -10,7 +10,7 @@ module.exports.sendRequest = function ({
   return new Promise(async function (resolve, reject) {
     pool.query(
       `INSERT INTO friend_requests (from_user , to_user , friendship_status) VALUES(?,?,?)`,
-      [from_user, to_user, 0],
+      [from_user, to_user, "0"],
       function (error) {
         if (error) {
           return reject(error);

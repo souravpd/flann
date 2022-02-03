@@ -8,6 +8,13 @@ module.exports.sendRequest = async function (request, response) {
     from_user: request.body.username,
     to_user: request.body.to_user,
   };
+  if (form_data.from_user == form_data.to_user) {
+    return response.status(400).json({
+      success: false,
+      error: "You can't send a friend Request to Yourself",
+      results: null,
+    });
+  }
   Friend.sendRequest(form_data)
     .then(function (results) {
       return response.status(200).json({
