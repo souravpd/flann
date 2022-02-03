@@ -58,6 +58,24 @@ module.exports.login = async function (request, response) {
     });
 };
 
+//Get all Users
+module.exports.getAllUsers = async function (request, response) {
+  User.getAllUsers()
+    .then(function (results) {
+      return response.status(200).json({
+        success: true,
+        error: null,
+        results: results,
+      });
+    })
+    .catch(function (error) {
+      return response.status(400).json({
+        success: false,
+        error: error,
+        results: null,
+      });
+    });
+};
 //Get One User (Authenticated Request)
 module.exports.getUser = async function (request, response) {
   const username = request.params.username;

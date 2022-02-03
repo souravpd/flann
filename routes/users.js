@@ -10,7 +10,8 @@ const router = express.Router();
 //Define Routes
 router.post("/signUp", usersController.signUp);
 router.post("/login", usersController.login);
-router.get("/:username", verify_token, usersController.getUser);
+router.get("/getUser/:username", verify_token, usersController.getUser);
+router.get("/getAllUsers", usersController.getAllUsers);
 
 //Exports
 module.exports = router;
