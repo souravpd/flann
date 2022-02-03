@@ -12,7 +12,7 @@ const router = express.Router();
 router.post("/sendRequest", verify_token, friendsController.sendRequest);
 router.post("/acceptRequest", verify_token, friendsController.acceptRequest);
 router.post("/rejectRequest", verify_token, friendsController.rejectRequest);
-router.get("/getAllFriends", verify_token, friendsController.getAllFriends);
+router.post("/getAllFriends", verify_token, friendsController.getAllFriends);
 router.post(
   "/getMutualFriends",
   verify_token,

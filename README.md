@@ -1,19 +1,14 @@
 # Flann
 Implemetation of a Social Networking Website
 
-### Technologies Used
-* Nodejs
-* Expressjs
-* EJS
-
 ### Task List
 - [X] Create Project Structure
 - [X] Implement Authentication
 - [X] Implement Get all Users
 - [ ] Implement Friends
-- [ ] Implement Posts
+- [ ] Implement Friends Graphs
 - [ ] Implement Image Upload
+- [ ] Implement Posts
 - [ ] Implement Profile Updates
-- [ ] Implement Friends Search
+- [ ] Implement Search
 - [ ] Implement AutoComplete
-- [ ] Implement Friends Recommendation
