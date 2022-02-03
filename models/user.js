@@ -66,6 +66,19 @@ module.exports.login = function ({ username, password }) {
   });
 };
 
+//Get all Users
+module.exports.getAllUsers = function () {
+  return new Promise(function (resolve, reject) {
+    pool.query(`SELECT username FROM users`, [], function (error, results) {
+      if (error) {
+        return reject("Users not found");
+      } else if (results.length == 0) {
+        return resolve("No Users");
+      }
+      return resolve(results);
+    });
+  });
+};
 //Get User
 module.exports.getUser = function (username) {
   return new Promise(function (resolve, reject) {
