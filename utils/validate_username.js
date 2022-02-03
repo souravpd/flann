@@ -18,4 +18,4 @@ function validate_username(username) {
   });
 }
 
-module.exports = validate_username;
+module.exports = { validate_username };

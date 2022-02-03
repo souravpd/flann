@@ -2,15 +2,18 @@
 const jwt = require("jsonwebtoken");
 //Local Imports
 const { pool } = require("../config/db");
+const { uid } = require("../utils/uid");
+
 //SendRequest
 module.exports.sendRequest = function ({
   from_user: from_user,
   to_user: to_user,
 }) {
   return new Promise(async function (resolve, reject) {
+    let request_id = uid();
     pool.query(
-      `INSERT INTO friend_requests (from_user , to_user , friendship_status) VALUES(?,?,?)`,
-      [from_user, to_user, "0"],
+      `INSERT INTO friend_requests (from_user , to_user , friendship_status, request_id) VALUES(?,?,?,?)`,
+      [from_user, to_user, "0", request_id],
       function (error) {
         if (error) {
           return reject(error);

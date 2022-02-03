@@ -29,4 +29,4 @@ function validate(username, password) {
   });
 }
 
-module.exports = validate;
+module.exports = { validate };

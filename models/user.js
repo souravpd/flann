@@ -4,8 +4,8 @@ const jwt = require("jsonwebtoken");
 
 //Local Imports
 const { pool } = require("../config/db");
-const validate = require("../utils/validate");
-const validate_username = require("../utils/validate_username");
+const { validate } = require("../utils/validate");
+const { validate_username } = require("../utils/validate_username");
 
 //SignUp
 module.exports.signUp = function ({
