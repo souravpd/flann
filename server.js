@@ -6,6 +6,7 @@ const dotenv = require("dotenv").config();
 //Define Router Files
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
+const friendsRouter = require("./routes/friends");
 
 //Define Port
 const port = process.env.PORT;
@@ -18,6 +19,7 @@ app.use(express.json());
 //Define Routes
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+app.use("/friends", friendsRouter);
 
 //Create the Server
 app.listen(port, function (err) {

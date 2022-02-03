@@ -18,9 +18,16 @@ module.exports.signUp = async function (request, response) {
       });
     })
     .catch(function (error) {
+      if (error == "Username Already Taken") {
+        return response.status(400).json({
+          success: false,
+          error: error,
+          results: null,
+        });
+      }
       return response.status(400).json({
         success: false,
-        error,
+        error: error,
         results: null,
       });
     });

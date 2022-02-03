@@ -5,6 +5,7 @@ const jwt = require("jsonwebtoken");
 //Local Imports
 const { pool } = require("../config/db");
 const validate = require("../utils/validate");
+const validate_username = require("../utils/validate_username");
 
 //SignUp
 module.exports.signUp = function ({
@@ -13,6 +14,15 @@ module.exports.signUp = function ({
   password: password,
 }) {
   return new Promise(async function (resolve, reject) {
+    let isValidUsername;
+    try {
+      isValidUsername = await validate_username(username);
+    } catch (error) {
+      return reject(error);
+    }
+    if (!isValidUsername) {
+      return reject("Username Already Taken");
+    }
     bcrypt.genSalt(parseInt(process.env.SALT_ROUNDS), function (error, salt) {
       if (error) {
         return reject(error);
