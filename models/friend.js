@@ -4,7 +4,6 @@ const jwt = require("jsonwebtoken");
 const { pool } = require("../config/db");
 const { uid } = require("../utils/uid");
 const { get_friendship_data } = require("../utils/get_friendship_data");
-
 //SendRequest
 module.exports.sendRequest = function ({
   from_user: from_user,
@@ -113,4 +112,20 @@ module.exports.getAllFriends = function ({ username: username }) {
   });
 };
 //getMutualFriends
-module.exports.getMutualFriends = function (username) {};
+module.exports.getMutualFriends = function ({
+  username: username,
+  with_username: with_username,
+}) {
+  return new Promise(async function (resolve, reject) {
+    pool.query(
+      `SELECT users.username FROM users, friends WHERE CASE WHEN friends.friend_one = ? THEN friends.friend_two = users.username WHEN friends.friend_two = ? THEN friends.friend_one= users.username END AND users.username IN (SELECT users.username FROM users, friends WHERE CASE WHEN friends.friend_one = ? THEN friends.friend_two = users.username WHEN friends.friend_two= ? THEN friends.friend_one= users.username END)`,
+      [username, username, with_username, with_username],
+      function (error, results) {
+        if (error) {
+          return reject(error);
+        }
+        return resolve(results);
+      }
+    );
+  });
+};

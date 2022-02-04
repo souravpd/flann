@@ -95,4 +95,24 @@ module.exports.getAllFriends = async function (request, response) {
     });
 };
 //getMutualFriends
-module.exports.getMutualFriends = function (request, response) {};
+module.exports.getMutualFriends = async function (request, response) {
+  let form_data = {
+    username: request.body.username,
+    with_username: request.body.with_username,
+  };
+  Friend.getMutualFriends(form_data)
+    .then(function (results) {
+      return response.status(200).json({
+        success: true,
+        error: null,
+        results: results,
+      });
+    })
+    .catch(function (error) {
+      return response.status(400).json({
+        success: false,
+        error: error,
+        results: null,
+      });
+    });
+};

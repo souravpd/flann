@@ -5,17 +5,17 @@ Implemetation of a Social Networking Website
 - [X] Create Project Structure
 - [X] Implement Authentication
 - [X] Implement Get all Users
-- [ ] Implement Friends
-  - [ ] Add Redis 
-  - [ ] Make Relationship Graph
-  - [X] Find Immediate Friends
-  - [ ] Find Mutual Friends
-  - [ ] Recommend Friends
-  - [ ] Display Public Posts
-  - [ ] Display Friend Posts
-  - [ ] Display Posts of Friend of Friends
-- [ ] Implement Image Upload
+- [X] Implement Friends
+- [X] Find Immediate Friends
+- [X] Find Mutual Friends
+- [ ] Make Relationship Graph
+- [ ] Add Redis 
+- [ ] Recommend Friends
 - [ ] Implement Posts
+- [ ] Display Public Posts
+- [ ] Display Friend Posts
+- [ ] Display Posts of Friend of Friends
+- [ ] Implement Image Upload
 - [ ] Implement Profile Updates
 - [ ] Implement Search
 - [ ] Implement AutoComplete
