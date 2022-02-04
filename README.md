@@ -8,7 +8,7 @@ Implemetation of a Social Networking Website
 - [ ] Implement Friends
   - [ ] Add Redis 
   - [ ] Make Relationship Graph
-  - [ ] Find Immediate Friends
+  - [X] Find Immediate Friends
   - [ ] Find Mutual Friends
   - [ ] Recommend Friends
   - [ ] Display Public Posts
