@@ -6,6 +6,13 @@ Implemetation of a Social Networking Website
 - [X] Implement Authentication
 - [X] Implement Get all Users
 - [ ] Implement Friends
+  - [ ] Make Relationship Graph
+  - [ ] Find Immediate Friends
+  - [ ] Find Mutual Friends
+  - [ ] Recommend Friends
+  - [ ] Display Public Posts
+  - [ ] Display Friend Posts
+  - [ ] Display Posts of Friend of Friends
 - [ ] Implement Friends Graphs
 - [ ] Implement Image Upload
 - [ ] Implement Posts
