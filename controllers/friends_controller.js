@@ -32,7 +32,26 @@ module.exports.sendRequest = async function (request, response) {
     });
 };
 //AcceptRequest
-module.exports.acceptRequest = function (request, response) {};
+module.exports.acceptRequest = async function (request, response) {
+  let form_data = {
+    request_id: request.body.request_id,
+  };
+  Friend.acceptRequest(form_data)
+    .then(function (results) {
+      return response.status(200).json({
+        success: true,
+        error: null,
+        results,
+      });
+    })
+    .catch(function (error) {
+      return response.status(400).json({
+        success: false,
+        error: error,
+        results: null,
+      });
+    });
+};
 //RejectRequest
 module.exports.rejectRequest = function (request, response) {};
 //getAllFriends

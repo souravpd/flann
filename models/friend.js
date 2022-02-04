@@ -3,6 +3,7 @@ const jwt = require("jsonwebtoken");
 //Local Imports
 const { pool } = require("../config/db");
 const { uid } = require("../utils/uid");
+const { get_friendship_data } = require("../utils/get_friendship_data");
 
 //SendRequest
 module.exports.sendRequest = function ({
@@ -24,7 +25,63 @@ module.exports.sendRequest = function ({
   });
 };
 //AcceptRequest
-module.exports.acceptRequest = function ({ request_id: request_id }) {};
+module.exports.acceptRequest = function ({ request_id: request_id }) {
+  return new Promise(async function (resolve, reject) {
+    pool.getConnection(function (error, connection) {
+      if (error) {
+        return reject(error);
+      }
+      connection.beginTransaction(function (error) {
+        if (error) {
+          return reject(error);
+        }
+        connection.query(
+          `UPDATE friend_requests SET friendship_status = ? WHERE request_id = ?`,
+          ["1", request_id],
+          async function (error, results) {
+            if (error) {
+              connection.rollback(function () {
+                connection.release();
+              });
+              return reject(error);
+            }
+            let friendship_data = await get_friendship_data(request_id);
+            friendship_data = JSON.parse(JSON.stringify(friendship_data))[0];
+            let from_user = friendship_data.from_user;
+            let to_user = friendship_data.to_user;
+            let new_promise = new Promise(function (resolve, reject) {
+              connection.query(
+                `INSERT INTO friends (friend_one , friend_two) VALUES (?,?)`,
+                [from_user, to_user],
+                function (error, results) {
+                  if (error) {
+                    return reject(error);
+                  }
+                  return resolve();
+                }
+              );
+            });
+            try {
+              await new_promise;
+            } catch (new_error) {
+              connection.rollback(function () {
+                connection.release();
+                return reject(new_error);
+              });
+            }
+            connection.commit(function (error, results) {
+              connection.release();
+              if (error) {
+                return reject(error);
+              }
+              resolve(results);
+            });
+          }
+        );
+      });
+    });
+  });
+};
 //RejectRequest
 module.exports.rejectRequest = function (request_id) {};
 //getAllFriends
