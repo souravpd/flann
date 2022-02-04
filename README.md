@@ -6,6 +6,7 @@ Implemetation of a Social Networking Website
 - [X] Implement Authentication
 - [X] Implement Get all Users
 - [ ] Implement Friends
+  - [ ] Add Redis 
   - [ ] Make Relationship Graph
   - [ ] Find Immediate Friends
   - [ ] Find Mutual Friends
