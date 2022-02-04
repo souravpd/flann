@@ -13,7 +13,6 @@ Implemetation of a Social Networking Website
   - [ ] Display Public Posts
   - [ ] Display Friend Posts
   - [ ] Display Posts of Friend of Friends
-- [ ] Implement Friends Graphs
 - [ ] Implement Image Upload
 - [ ] Implement Posts
 - [ ] Implement Profile Updates
