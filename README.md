@@ -10,6 +10,9 @@ Implemetation of a Social Networking Website
 - [X] Find Mutual Friends
 - [ ] Make Relationship Graph
 - [ ] Add Redis 
+  - [ ] Jaccard Coefficient from all Users
+  - [ ] Shortest Path from all Users
+  - [ ] Store Friends 
 - [ ] Recommend Friends
 - [ ] Implement Posts
 - [ ] Display Public Posts
