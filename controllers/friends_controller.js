@@ -74,6 +74,25 @@ module.exports.rejectRequest = async function (request, response) {
     });
 };
 //getAllFriends
-module.exports.getAllFriends = function (request, response) {};
+module.exports.getAllFriends = async function (request, response) {
+  let form_data = {
+    username: request.body.username,
+  };
+  Friend.getAllFriends(form_data)
+    .then(function (results) {
+      return response.status(200).json({
+        success: true,
+        error: null,
+        results,
+      });
+    })
+    .catch(function (error) {
+      return response.status(400).json({
+        success: false,
+        error: error,
+        results: null,
+      });
+    });
+};
 //getMutualFriends
 module.exports.getMutualFriends = function (request, response) {};

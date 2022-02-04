@@ -98,6 +98,19 @@ module.exports.rejectRequest = function ({ request_id: request_id }) {
   });
 };
 //getAllFriends
-module.exports.getAllFriends = function (username) {};
+module.exports.getAllFriends = function ({ username: username }) {
+  return new Promise(async function (resolve, reject) {
+    pool.query(
+      `SELECT users.username, users.email, users.create_time FROM users, friends WHERE CASE WHEN friends.friend_one = ? THEN friends.friend_two = users.username WHEN friends.friend_two= ? THEN friends.friend_one= users.username END`,
+      [username, username],
+      function (error, results) {
+        if (error) {
+          return reject(error);
+        }
+        return resolve(results);
+      }
+    );
+  });
+};
 //getMutualFriends
 module.exports.getMutualFriends = function (username) {};
