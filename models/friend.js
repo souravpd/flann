@@ -83,7 +83,20 @@ module.exports.acceptRequest = function ({ request_id: request_id }) {
   });
 };
 //RejectRequest
-module.exports.rejectRequest = function (request_id) {};
+module.exports.rejectRequest = function ({ request_id: request_id }) {
+  return new Promise(async function (resolve, reject) {
+    pool.query(
+      `UPDATE friend_requests SET friendship_status = ? WHERE request_id = ?`,
+      ["2", request_id],
+      function (error) {
+        if (error) {
+          return reject(error);
+        }
+        return resolve("FriendShip Rejected");
+      }
+    );
+  });
+};
 //getAllFriends
 module.exports.getAllFriends = function (username) {};
 //getMutualFriends
