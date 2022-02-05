@@ -94,6 +94,7 @@ class Graph {
   }
 }
 
+module.exports = Graph;
 // =========TESTING CODE ====================//
 // g = new Graph();
 // g.addVertex("name1");

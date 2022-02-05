@@ -22,3 +22,6 @@ Implemetation of a Social Networking Website
 - [ ] Implement Profile Updates
 - [ ] Implement Search
 - [ ] Implement AutoComplete
+
+### Temp Idea to Implement Redis Caching
+![temp_struct](./static/img/temp_struct.png "Temp Flow")
