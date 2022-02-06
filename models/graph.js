@@ -1,12 +1,7 @@
 //Local Imports
-const { pool } = require("../config/db");
 const Graph = require("../utils/DataStructures");
 const { getAllVertices, getAllEdges } = require("../utils/graph_utils");
-const {
-  redisSetGraph,
-  redisClearGraph,
-  redisGetGraph,
-} = require("../utils/redis_utils");
+const { redisSetGraph, redisGetGraph } = require("../utils/redis_utils");
 
 //Create the Graph
 g = new Graph();
