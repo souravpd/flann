@@ -61,10 +61,18 @@ class Graph {
     this.graph.get(user1).add(user2);
     this.graph.get(user2).add(user1);
   }
-  printGraph() {
+  stringify() {
+    let graph_string = {};
     for (let user of this.graph) {
-      console.log(user);
+      graph_string[user[0]] = [];
+      for (let key of user[1]) {
+        graph_string[user[0]].push(key);
+      }
     }
+    return JSON.stringify(graph_string);
+  }
+  load_graph(graph_string) {
+    //TODO
   }
   getGraph() {
     return this.graph;

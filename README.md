@@ -8,8 +8,8 @@ Implemetation of a Social Networking Website
 - [X] Implement Friends
 - [X] Find Immediate Friends
 - [X] Find Mutual Friends
-- [ ] Make Relationship Graph
-- [ ] Add Redis 
+- [X] Make Relationship Graph
+- [X] Add Redis 
   - [ ] Jaccard Coefficient from all Users
   - [ ] Shortest Path from all Users
   - [ ] Store Friends 

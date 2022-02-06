@@ -2,8 +2,9 @@
 const express = require("express");
 
 //LocalImports
-const graphsController = require("../controllers/friends_controller");
+const graphsController = require("../controllers/graphs_controller");
 const { verify_token } = require("../utils/verify_token");
+
 //Create Router
 const router = express.Router();
 
@@ -30,22 +31,23 @@ router.get(
 );
 
 //This function returns the list of immediate friends
-//Called when a user log in
+//Called when a user log in or accepts a request
 router.get("/getFriends/:username", verify_token, graphsController.getFriends);
 
 //This function returns the list of friends in range distance (2 <= dist <= 4)
-//Called when a user log in
+//Called when a user log in or accepts a request
 router.get(
-  "/getExtendedFreinds/:username",
+  "/getExtendedFriends/:username",
   verify_token,
   graphsController.getExtendedFriends
 );
 
 //This function calculates the Jaccard Coefficient of Similarity for Recommending New Friends
-//Called when a user log in
-
+//Called when a user log in or accepts a request
 router.get(
   "/getRecommendations/:username",
   verify_token,
   graphsController.getRecommendations
 );
+
+module.exports = router;
