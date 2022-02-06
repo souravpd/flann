@@ -51,8 +51,12 @@ class PriorityQueue {
   }
 }
 class Graph {
-  constructor() {
-    this.graph = new Map();
+  constructor(graph_string) {
+    if (graph_string === undefined) {
+      this.graph = new Map();
+    } else {
+      this.load_graph(graph_string);
+    }
   }
   addVertex(user) {
     this.graph.set(user, new Set());
@@ -60,6 +64,11 @@ class Graph {
   addEdge(user1, user2) {
     this.graph.get(user1).add(user2);
     this.graph.get(user2).add(user1);
+  }
+  printGraph() {
+    for (let user of this.graph) {
+      console.log(user);
+    }
   }
   stringify() {
     let graph_string = {};
@@ -72,7 +81,16 @@ class Graph {
     return JSON.stringify(graph_string);
   }
   load_graph(graph_string) {
-    //TODO
+    graph_string = JSON.parse(graph_string);
+    let users = Object.keys(graph_string);
+    let temp_graph = new Map();
+    users.forEach(function (user) {
+      temp_graph.set(user, new Set());
+      for (let friend of graph_string[user]) {
+        temp_graph.get(user).add(friend);
+      }
+    });
+    this.graph = temp_graph;
   }
   getGraph() {
     return this.graph;
@@ -103,7 +121,7 @@ class Graph {
 }
 
 module.exports = Graph;
-// =========TESTING CODE ====================//
+// //=========TESTING CODE ====================//
 // g = new Graph();
 // g.addVertex("name1");
 // g.addVertex("name2");
@@ -126,8 +144,16 @@ module.exports = Graph;
 // g.addEdge("name7", "name8");
 // g.addEdge("name7", "name9");
 // g.addEdge("name9", "name10");
+
+// console.log("Graph 1");
 // g.printGraph();
 
-// let { distance, parent } = g.dijkstra("name1");
+// // let { distance, parent } = g.dijkstra("name1");
 
-// console.log(distance);
+// // console.log(distance);
+
+// graph_string = g.stringify();
+
+// G = new Graph(graph_string);
+// console.log("Graph 2");
+// G.printGraph();

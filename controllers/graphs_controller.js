@@ -18,10 +18,6 @@ module.exports.buildGraph = async function (request, response) {
       });
     });
 };
-//Add Vertex
-module.exports.addVertex = function ({}) {};
-//Add Edge
-module.exports.addEdge = function ({}) {};
 //Get Shortest Distances
 module.exports.getShortestDistances = function ({}) {};
 //Get Friends

@@ -14,14 +14,6 @@ const router = express.Router();
 //Called once at the start of the server and periodically as a cron job
 router.get("/buildGraph", graphsController.buildGraph);
 
-//This function updates the graph when a new user is added
-//Called when a new user is added
-router.get("/addVertex", graphsController.addVertex);
-
-//This function updates the graph when a new friendship is created
-//Called when a new friendship is created
-router.get("/addEdge", graphsController.addEdge);
-
 //This function calculates the shortest distances from a username
 //Called when a User log in
 router.get(
