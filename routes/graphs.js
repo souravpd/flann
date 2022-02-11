@@ -17,7 +17,7 @@ router.get("/buildGraph", graphsController.buildGraph);
 //This function calculates the shortest distances from a username
 //Called when a User log in
 router.get(
-  "/getShortestDistances",
+  "/getShortestDistances/:username",
   verify_token,
   graphsController.getShortestDistances
 );

@@ -116,44 +116,46 @@ class Graph {
         }
       }
     }
-    return { distance, parent };
+    return Object.fromEntries(distance);
   }
 }
 
 module.exports = Graph;
-// //=========TESTING CODE ====================//
-// g = new Graph();
-// g.addVertex("name1");
-// g.addVertex("name2");
-// g.addVertex("name3");
-// g.addVertex("name4");
-// g.addVertex("name5");
-// g.addVertex("name6");
-// g.addVertex("name7");
-// g.addVertex("name8");
-// g.addVertex("name9");
-// g.addVertex("name10");
+//=========TESTING CODE ====================//
+g = new Graph();
+g.addVertex("name1");
+g.addVertex("name2");
+g.addVertex("name3");
+g.addVertex("name4");
+g.addVertex("name5");
+g.addVertex("name6");
+g.addVertex("name7");
+g.addVertex("name8");
+g.addVertex("name9");
+g.addVertex("name10");
 
-// g.addEdge("name1", "name2");
-// g.addEdge("name1", "name3");
-// g.addEdge("name1", "name4");
-// g.addEdge("name2", "name5");
-// g.addEdge("name3", "name4");
-// g.addEdge("name3", "name6");
-// g.addEdge("name6", "name7");
-// g.addEdge("name7", "name8");
-// g.addEdge("name7", "name9");
-// g.addEdge("name9", "name10");
+g.addEdge("name1", "name2");
+g.addEdge("name1", "name3");
+g.addEdge("name1", "name4");
+g.addEdge("name2", "name5");
+g.addEdge("name3", "name4");
+g.addEdge("name3", "name6");
+g.addEdge("name6", "name7");
+g.addEdge("name7", "name8");
+g.addEdge("name7", "name9");
+g.addEdge("name9", "name10");
 
-// console.log("Graph 1");
-// g.printGraph();
+console.log("Graph 1");
+g.printGraph();
 
-// // let { distance, parent } = g.dijkstra("name1");
+// let { distance, parent } = g.dijkstra("name1");
 
-// // console.log(distance);
+// console.log(distance);
 
-// graph_string = g.stringify();
+graph_string = JSON.parse(JSON.stringify(g.stringify()));
 
-// G = new Graph(graph_string);
-// console.log("Graph 2");
-// G.printGraph();
+G = new Graph(graph_string);
+console.log("Graph 2");
+G.printGraph();
+// let distance = G.dijkstra("name1");
+// console.log(distance);

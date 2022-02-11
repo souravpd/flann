@@ -19,7 +19,24 @@ module.exports.buildGraph = async function (request, response) {
     });
 };
 //Get Shortest Distances
-module.exports.getShortestDistances = function ({}) {};
+module.exports.getShortestDistances = async function (request, response) {
+  let username = request.params.username;
+  Graph.getShortestDistances({ username })
+    .then(function (results) {
+      return response.status(200).json({
+        success: true,
+        error: null,
+        results: results,
+      });
+    })
+    .catch(function (error) {
+      return response.status(400).json({
+        success: false,
+        error: error,
+        results: null,
+      });
+    });
+};
 //Get Friends
 module.exports.getFriends = function ({}) {};
 //Get Extended Friends

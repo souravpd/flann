@@ -1,13 +1,16 @@
 //Local Imports
 const Graph = require("../utils/DataStructures");
 const { getAllVertices, getAllEdges } = require("../utils/graph_utils");
-const { redisSetGraph, redisGetGraph } = require("../utils/redis_utils");
+const {
+  redisSetGraph,
+  redisGetGraph,
+  redisSetShortestPaths,
+} = require("../utils/redis_utils");
 
-//Create the Graph
-g = new Graph();
 //Build Graph
 module.exports.buildGraph = function () {
   return new Promise(async function (resolve, reject) {
+    let g = new Graph();
     let vertices, edges;
     try {
       vertices = JSON.parse(await getAllVertices());
@@ -32,11 +35,36 @@ module.exports.buildGraph = function () {
       console.error(error);
       return reject(error);
     }
-    return resolve("Loaded Graph in Redis");
+    return resolve();
   });
 };
 //Get Shortest Distances
-module.exports.getShortestDistances = function ({}) {};
+module.exports.getShortestDistances = function ({ username: username }) {
+  return new Promise(async function (resolve, reject) {
+    let graph;
+    try {
+      graph = await redisGetGraph();
+    } catch (error) {
+      return reject(error);
+    }
+    if (graph === null || graph === undefined) {
+      try {
+        graph = await module.exports.buildGraph();
+      } catch (error) {
+        return reject(error);
+      }
+    }
+    let g = new Graph(graph);
+    let results = g.dijkstra(username);
+    let new_promise;
+    try {
+      new_promise = await redisSetShortestPaths(username, results);
+    } catch (error) {
+      return reject(error);
+    }
+    return resolve(results);
+  });
+};
 //Get Friends
 module.exports.getFriends = function ({}) {};
 //Get Extended Friends
