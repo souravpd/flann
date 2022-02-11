@@ -58,6 +58,34 @@ async function redisClearShortestPaths(username) {
   return await clear(`${username}_shortest_paths`);
 }
 
+//Store Friends Utils
+async function redisSetFriends(username, friends) {
+  return await set(`${username}_friends`, JSON.stringify(friends));
+}
+
+async function redisGetFriends(username) {
+  return JSON.parse(await get(`${username}_friends`));
+}
+
+async function redisClearFriends(username) {
+  return await clear(`${username}_friends`);
+}
+
+//Store Extended Friends Utils
+async function redisSetExtendedFriends(username, extended_friends) {
+  return await set(
+    `${username}_extended_friends`,
+    JSON.stringify(extended_friends)
+  );
+}
+
+async function redisGetExtendedFriends(username) {
+  return JSON.parse(await get(`${username}_extended_friends`));
+}
+
+async function redisClearExtendedFriends(username) {
+  return await clear(`${username}_extended_friends`);
+}
 module.exports = {
   redisSetGraph,
   redisGetGraph,
@@ -65,4 +93,10 @@ module.exports = {
   redisSetShortestPaths,
   redisGetShortestPaths,
   redisClearShortestPaths,
+  redisSetFriends,
+  redisGetFriends,
+  redisClearFriends,
+  redisSetExtendedFriends,
+  redisGetExtendedFriends,
+  redisClearExtendedFriends,
 };

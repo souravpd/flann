@@ -5,6 +5,9 @@ const {
   redisSetGraph,
   redisGetGraph,
   redisSetShortestPaths,
+  redisGetShortestPaths,
+  redisSetFriends,
+  redisSetExtendedFriends,
 } = require("../utils/redis_utils");
 
 //Build Graph
@@ -65,6 +68,50 @@ module.exports.getShortestDistances = function ({ username: username }) {
     return resolve(results);
   });
 };
+//Load Friends
+module.exports.loadFriends = function ({ username: username }) {
+  return new Promise(async function (resolve, reject) {
+    let shortest_paths;
+    try {
+      shortest_paths = await redisGetShortestPaths(username);
+    } catch (error) {
+      return reject(error);
+    }
+    if (shortest_paths === null || shortest_paths == undefined) {
+      try {
+        shortest_paths = await module.exports.getShortestDistances({
+          username: username,
+        });
+      } catch (error) {
+        return reject(error);
+      }
+    }
+    let distances = new Map(Object.entries(shortest_paths));
+    let friends = [];
+    let extended_friends = [];
+    for (let [user, distance] of distances.entries()) {
+      if (distance === 1) {
+        friends.push(user);
+      } else if (distance >= 2 && distance < 5) {
+        extended_friends.push(user);
+      }
+    }
+    let new_promise;
+    try {
+      new_promise = await redisSetFriends(username, friends);
+    } catch (error) {
+      return reject(error);
+    }
+    let new_promise_2;
+    try {
+      new_promise_2 = await redisSetExtendedFriends(username, extended_friends);
+    } catch (error) {
+      return reject(error);
+    }
+    return resolve({ friends, extended_friends });
+  });
+};
+
 //Get Friends
 module.exports.getFriends = function ({}) {};
 //Get Extended Friends

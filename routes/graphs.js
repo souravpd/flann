@@ -17,10 +17,12 @@ router.get("/buildGraph", graphsController.buildGraph);
 //This function calculates the shortest distances from a username
 //Called when a User log in
 router.get(
-  "/getShortestDistances/:username",
+  "/getShortestDistances",
   verify_token,
   graphsController.getShortestDistances
 );
+
+router.get("/loadFriends", verify_token, graphsController.loadFriends);
 
 //This function returns the list of immediate friends
 //Called when a user log in or accepts a request
