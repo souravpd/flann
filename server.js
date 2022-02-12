@@ -17,6 +17,8 @@ const app = express();
 
 //Parse Incoming Form Data
 app.use(express.json());
+//Static Routes
+app.use("/static", express.static("./static"));
 
 //Define Routes
 app.use("/", indexRouter);
