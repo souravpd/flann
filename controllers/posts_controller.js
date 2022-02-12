@@ -59,4 +59,21 @@ module.exports.getAllFriendsPosts = function (request, response) {
       });
     });
 };
-module.exports.getAllExtendedFriendsPosts = function (request, response) {};
+module.exports.getAllExtendedFriendsPosts = function (request, response) {
+  let username = request.body.username;
+  Post.getAllExtendedFriendsPosts({ username: username })
+    .then(function (results) {
+      return response.status(200).json({
+        success: true,
+        error: null,
+        results: results,
+      });
+    })
+    .catch(function (error) {
+      return response.status(400).json({
+        success: false,
+        error: error,
+        results: null,
+      });
+    });
+};

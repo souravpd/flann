@@ -1,6 +1,9 @@
 //Local Imports
 const { pool } = require("../config/db");
-const { redisGetFriends } = require("../utils/redis_utils");
+const {
+  redisGetFriends,
+  redisGetExtendedFriends,
+} = require("../utils/redis_utils");
 const { uid } = require("../utils/uid");
 
 module.exports.createPost = function ({
@@ -59,6 +62,34 @@ module.exports.getAllFriendsPosts = function ({ username: username }) {
             return user_friends.has(row.username);
           });
           return resolve(friend_posts);
+        }
+      }
+    );
+  });
+};
+
+module.exports.getAllExtendedFriendsPosts = function ({ username: username }) {
+  return new Promise(async function (resolve, reject) {
+    pool.query(
+      `SELECT * from posts WHERE visibility=?`,
+      ["2"],
+      async function (error, results) {
+        if (error) {
+          return reject(error);
+        } else {
+          let rows = Object.values(JSON.parse(JSON.stringify(results)));
+          let user_extended_friends;
+          try {
+            user_extended_friends = new Set(
+              await redisGetExtendedFriends(username)
+            );
+          } catch (error) {
+            return reject(error);
+          }
+          extended_friends_posts = rows.filter(function (row) {
+            return user_extended_friends.has(row.username);
+          });
+          return resolve(extended_friends_posts);
         }
       }
     );
