@@ -41,5 +41,22 @@ module.exports.getAllPublicPosts = function (request, response) {
     });
 };
 
-module.exports.getAllFriendsPosts = function (request, response) {};
+module.exports.getAllFriendsPosts = function (request, response) {
+  let username = request.body.username;
+  Post.getAllFriendsPosts({ username: username })
+    .then(function (results) {
+      return response.status(200).json({
+        success: true,
+        error: null,
+        results: results,
+      });
+    })
+    .catch(function (error) {
+      return response.status(400).json({
+        success: false,
+        error: error,
+        results: null,
+      });
+    });
+};
 module.exports.getAllExtendedFriendsPosts = function (request, response) {};

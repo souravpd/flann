@@ -1,5 +1,6 @@
 //Local Imports
 const { pool } = require("../config/db");
+const { redisGetFriends } = require("../utils/redis_utils");
 const { uid } = require("../utils/uid");
 
 module.exports.createPost = function ({
@@ -32,6 +33,32 @@ module.exports.getAllPublicPosts = function () {
           return reject(error);
         } else {
           return resolve(results);
+        }
+      }
+    );
+  });
+};
+
+module.exports.getAllFriendsPosts = function ({ username: username }) {
+  return new Promise(async function (resolve, reject) {
+    pool.query(
+      `SELECT * from posts WHERE visibility=?`,
+      ["1"],
+      async function (error, results) {
+        if (error) {
+          return reject(error);
+        } else {
+          let rows = Object.values(JSON.parse(JSON.stringify(results)));
+          let user_friends;
+          try {
+            user_friends = new Set(await redisGetFriends(username));
+          } catch (error) {
+            return reject(error);
+          }
+          friend_posts = rows.filter(function (row) {
+            return user_friends.has(row.username);
+          });
+          return resolve(friend_posts);
         }
       }
     );

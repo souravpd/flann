@@ -14,9 +14,9 @@ Implemetation of a Social Networking Website
   - [X] Shortest Path from all Users
   - [X] Store Friends 
 - [ ] Recommend Friends
-- [ ] Implement Posts
-- [ ] Display Public Posts
-- [ ] Display Friend Posts
+- [X] Implement Posts
+- [X] Display Public Posts
+- [X] Display Friend Posts
 - [ ] Display Posts of Friend of Friends
 - [ ] Implement Image Upload
 - [ ] Implement Profile Updates
