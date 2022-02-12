@@ -23,7 +23,74 @@ Implemetation of a Social Networking Website
 - [ ] Implement Search
 - [ ] Implement AutoComplete
 
-### Documentation
+### Databases
+- Mysql
+  - Database dump in ./static/documentation
+- Redis
+  
+### Environment Variables
+- PORT - Server Port
+- SALT_ROUNDS - Bcrypt
+- DB_HOST - Mysql Host
+- DB_USER - Mysql user
+- DB_PASSWORD - Mysql password
+- DB_NAME - Mysql Database name
+- DB_PORT - Mysql port
+- SIGN_SECRET - JWT Sign Secret
+- EXPIRY - Redis Cache Expiry
+- FILE_PATH - Multer File Uploads
+
+### Folder Structure
+```js
+├── README.md
+├── .env 
+├── .gitignore
+├── config
+│   └── db.js // Connect to MYSQL Database
+├── controllers 
+│   ├── friends_controller.js // /friends Controllers 
+│   ├── graphs_controller.js // /graphs Controllers
+│   ├── index_controller.js // / Controllers
+│   ├── posts_controller.js // /posts Controllers
+│   └── users_controller.js // /users Controllers
+├── middleware
+│   ├── graph_middlewares.js // Middleware to Load Graph for friends and extended_friends
+│   ├── middleware_utils.js // Graph Middleware Utils
+│   └── upload_middleware.js // Multer
+├── models
+│   ├── friend.js // Friend Model
+│   ├── graph.js // Graph Model
+│   ├── post.js // Post Model
+│   └── user.js // User Model
+├── package-lock.json
+├── package.json
+├── routes
+│   ├── friends.js // /friends
+│   ├── graphs.js // /graphs
+│   ├── index.js // /
+│   ├── posts.js // /posts
+│   └── users.js // /users
+├── server.js // Main App Entry Point
+├── static
+│   ├── documentation
+│   │   ├── Flann.md
+│   │   ├── Flann.postman_collection.json
+│   │   ├── flann_dev_data_dump_2022-02-12_222010.sql
+│   │   └── flann_dev_db_struct_2022-02-12_221900.sql
+│   └── uploads
+│       └── 1udo61a7du80ab8f3l9pxysilicate-structures.jpg
+└── utils 
+    ├── DataStructures.js // Graph,PriorityQueue
+    ├── get_friendship_data.js // Helpers for friends SQL
+    ├── graph_utils.js // Build Graph Utils
+    ├── redis_utils.js // Redis Setup and Helpers
+    ├── uid.js // Generate Unique ID
+    ├── validate.js // Get Unique Username
+    ├── validate_username.js // Login Helper
+    └── verify_token.js // JWT Helper
+```
+
+# API Documentation
 
 ## End-point: create_user
 ##### Create a new User
