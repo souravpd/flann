@@ -17,7 +17,7 @@ Implemetation of a Social Networking Website
 - [X] Implement Posts
 - [X] Display Public Posts
 - [X] Display Friend Posts
-- [ ] Display Posts of Friend of Friends
+- [X] Display Posts of Friend of Friends
 - [ ] Implement Image Upload
 - [ ] Implement Profile Updates
 - [ ] Implement Search
