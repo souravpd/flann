@@ -14,7 +14,8 @@ function verify_token(request, response, next) {
             results: null,
           });
         }
-        request.body.username = decoded.username;
+        request.auth = {};
+        request.auth.username = decoded.username;
         next();
       }
     );

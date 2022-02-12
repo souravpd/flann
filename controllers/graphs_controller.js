@@ -3,7 +3,7 @@ const Graph = require("../models/graph");
 
 //Get Friends
 module.exports.getFriends = async function (request, response) {
-  let username = request.body.username;
+  let username = request.auth.username;
   Graph.getFriends({ username })
     .then(function (results) {
       return response.status(200).json({
@@ -22,7 +22,7 @@ module.exports.getFriends = async function (request, response) {
 };
 //Get Extended Friends
 module.exports.getExtendedFriends = async function (request, response) {
-  let username = request.body.username;
+  let username = request.auth.username;
   Graph.getExtendedFriends({ username })
     .then(function (results) {
       return response.status(200).json({

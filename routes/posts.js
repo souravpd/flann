@@ -8,10 +8,15 @@ const {
   shortest_paths,
   load_friends,
 } = require("../middleware/graph_middlewares");
+const uploadFile = require("../middleware/upload_middleware");
 
 const router = express.Router();
 //Define Routes
-router.post("/createPost", verify_token, postsController.createPost);
+router.post(
+  "/createPost",
+  [verify_token, uploadFile],
+  postsController.createPost
+);
 router.get(
   "/getAllPublicPosts",
   verify_token,

@@ -19,7 +19,7 @@ async function build_graph(request, response, next) {
 }
 
 async function shortest_paths(request, response, next) {
-  let username = request.body.username;
+  let username = request.auth.username;
   shortestPaths({ username: username })
     .then(function () {
       next();
@@ -34,7 +34,7 @@ async function shortest_paths(request, response, next) {
 }
 
 async function load_friends(request, response, next) {
-  let username = request.body.username;
+  let username = request.auth.username;
   loadFriends({ username: username })
     .then(function () {
       next();

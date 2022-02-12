@@ -1,10 +1,12 @@
 const Post = require("../models/post");
 
 module.exports.createPost = function (request, response) {
+  console.log(request.auth.username);
   let form_data = {
-    username: request.body.username,
+    username: request.auth.username,
     content: request.body.content,
     visibility: request.body.visibility,
+    img_src: request.file.path,
   };
   Post.createPost(form_data)
     .then(function (results) {
@@ -42,7 +44,7 @@ module.exports.getAllPublicPosts = function (request, response) {
 };
 
 module.exports.getAllFriendsPosts = function (request, response) {
-  let username = request.body.username;
+  let username = request.auth.username;
   Post.getAllFriendsPosts({ username: username })
     .then(function (results) {
       return response.status(200).json({
@@ -60,7 +62,7 @@ module.exports.getAllFriendsPosts = function (request, response) {
     });
 };
 module.exports.getAllExtendedFriendsPosts = function (request, response) {
-  let username = request.body.username;
+  let username = request.auth.username;
   Post.getAllExtendedFriendsPosts({ username: username })
     .then(function (results) {
       return response.status(200).json({

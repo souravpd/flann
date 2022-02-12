@@ -1,5 +1,6 @@
 //Local Imports
 const { pool } = require("../config/db");
+
 const {
   redisGetFriends,
   redisGetExtendedFriends,
@@ -10,12 +11,13 @@ module.exports.createPost = function ({
   username: username,
   content: content,
   visibility: visibility,
+  img_src: img_src,
 }) {
   return new Promise(async function (resolve, reject) {
     let post_id = uid();
     pool.query(
-      `INSERT INTO posts (post_id, content, visibility, username) VALUES (?,?,?,?)`,
-      [post_id, content, visibility, username],
+      `INSERT INTO posts (post_id, content, visibility, username, img_src) VALUES (?,?,?,?,?)`,
+      [post_id, content, visibility, username, img_src],
       function (error) {
         if (error) {
           return reject(error);

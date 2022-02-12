@@ -5,7 +5,7 @@ const Friend = require("../models/friend");
 //sendRequest
 module.exports.sendRequest = async function (request, response) {
   let form_data = {
-    from_user: request.body.username,
+    from_user: request.auth.username,
     to_user: request.body.to_user,
   };
   if (form_data.from_user == form_data.to_user) {
@@ -76,7 +76,7 @@ module.exports.rejectRequest = async function (request, response) {
 //getAllFriends
 module.exports.getAllFriends = async function (request, response) {
   let form_data = {
-    username: request.body.username,
+    username: request.auth.username,
   };
   Friend.getAllFriends(form_data)
     .then(function (results) {
@@ -97,7 +97,7 @@ module.exports.getAllFriends = async function (request, response) {
 //getMutualFriends
 module.exports.getMutualFriends = async function (request, response) {
   let form_data = {
-    username: request.body.username,
+    username: request.auth.username,
     with_username: request.body.with_username,
   };
   Friend.getMutualFriends(form_data)

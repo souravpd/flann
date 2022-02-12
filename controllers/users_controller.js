@@ -5,7 +5,7 @@ const User = require("../models/user");
 //signup
 module.exports.signUp = async function (request, response) {
   let form_data = {
-    username: request.body.username,
+    username: request.auth.username,
     email: request.body.email,
     password: request.body.password,
   };
