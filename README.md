@@ -11,8 +11,8 @@ Implemetation of a Social Networking Website
 - [X] Make Relationship Graph
 - [X] Add Redis 
   - [ ] Jaccard Coefficient from all Users
-  - [ ] Shortest Path from all Users
-  - [ ] Store Friends 
+  - [X] Shortest Path from all Users
+  - [X] Store Friends 
 - [ ] Recommend Friends
 - [ ] Implement Posts
 - [ ] Display Public Posts
