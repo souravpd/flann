@@ -8,6 +8,7 @@ const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 const friendsRouter = require("./routes/friends");
 const graphsRouter = require("./routes/graphs");
+const postsRouter = require("./routes/posts");
 
 //Define Port
 const port = process.env.PORT;
@@ -22,6 +23,7 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/friends", friendsRouter);
 app.use("/graphs", graphsRouter);
+app.use("/posts", postsRouter);
 
 //Create the Server
 app.listen(port, function (err) {
