@@ -19,9 +19,14 @@ Implemetation of a Social Networking Website
 - [X] Display Friend Posts
 - [X] Display Posts of Friend of Friends
 - [X] Implement Image Upload
+- [ ] Implement Get Single Post
+- [ ] Implement Likes on Posts
+- [ ] Implement Comments on Posts
+- [ ] Implement HashTags
 - [ ] Implement Profile Updates
-- [ ] Implement Search
+- [ ] Implement Search (Users/Posts/HashTags)
 - [ ] Implement AutoComplete
+- [ ] Implement CSRF Protection
 
 ### Databases
 - Mysql
