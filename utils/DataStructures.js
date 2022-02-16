@@ -118,6 +118,42 @@ class Graph {
     }
     return Object.fromEntries(distance);
   }
+
+  getJaccardCoefficient(node1, node2) {
+    if (node1 === node2) {
+      return 0;
+    }
+    let set1 = new Set();
+    let set2 = new Set();
+    set1 = this.graph.get(node1);
+    set2 = this.graph.get(node2);
+    console.log(set1, set2);
+    let intersect = new Set(
+      [...set1].filter(function (elem) {
+        return set2.has(elem);
+      })
+    );
+    let union = new Set([...set1, ...set2]);
+    console.log(node1, node2, intersect, union);
+    return parseFloat((intersect.size / union.size).toFixed(2));
+  }
+  recommendFriends(user1) {
+    let ans = [];
+    for (let user2 of this.graph.keys()) {
+      ans.push({
+        friend: user2,
+        probability: this.getJaccardCoefficient(user1, user2),
+      });
+    }
+    ans.sort(function (elem1, elem2) {
+      if (elem1.probability > elem2.probability) {
+        return -1;
+      } else {
+        return 1;
+      }
+    });
+    return ans;
+  }
 }
 
 module.exports = Graph;
@@ -159,3 +195,5 @@ console.log("Graph 2");
 G.printGraph();
 // let distance = G.dijkstra("name1");
 // console.log(distance);
+
+console.log(G.recommendFriends("name1"));

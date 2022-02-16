@@ -7,6 +7,7 @@ const {
   redisGetShortestPaths,
   redisSetFriends,
   redisSetExtendedFriends,
+  redisSetFriendRecommendations,
 } = require("../utils/redis_utils");
 
 module.exports.buildGraph = function () {
@@ -102,6 +103,34 @@ module.exports.loadFriends = function ({ username: username }) {
     let new_promise_2;
     try {
       new_promise_2 = await redisSetExtendedFriends(username, extended_friends);
+    } catch (error) {
+      return reject(error);
+    }
+    return resolve();
+  });
+};
+//Jaccard Coefficient (N(intersection) / N(union))
+//load the graph
+//loop through the
+module.exports.loadRecommendations = function ({ username: username }) {
+  return new Promise(async function (resolve, reject) {
+    let graph;
+    try {
+      graph = await redisGetGraph();
+    } catch (error) {
+      return reject(error);
+    }
+    if (graph === null || graph === undefined) {
+      return reject();
+    }
+    graph = new Graph(graph);
+    let friend_recommendations = graph.recommendFriends(username);
+    let new_promise;
+    try {
+      new_promise = await redisSetFriendRecommendations(
+        username,
+        friend_recommendations
+      );
     } catch (error) {
       return reject(error);
     }

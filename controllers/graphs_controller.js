@@ -39,4 +39,21 @@ module.exports.getExtendedFriends = async function (request, response) {
     });
 };
 //Get Recommendations
-module.exports.getRecommendations = function ({}) {};
+module.exports.getRecommendations = async function (request, response) {
+  let username = request.auth.username;
+  Graph.getRecommendations({ username })
+    .then(function (results) {
+      return response.status(200).json({
+        success: true,
+        error: null,
+        results: results,
+      });
+    })
+    .catch(function (error) {
+      return response.status(400).json({
+        success: false,
+        error: error,
+        results: null,
+      });
+    });
+};

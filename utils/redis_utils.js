@@ -86,6 +86,23 @@ async function redisGetExtendedFriends(username) {
 async function redisClearExtendedFriends(username) {
   return await clear(`${username}_extended_friends`);
 }
+
+//Recommend Friends Utils
+async function redisSetFriendRecommendations(username, recommendations) {
+  return await set(
+    `${username}_friend_recommendations`,
+    JSON.stringify(recommendations)
+  );
+}
+
+async function redisGetFriendRecommendations(username) {
+  return JSON.parse(await get(`${username}_friend_recommendations`));
+}
+
+async function redisClearFriendRecommendations(username) {
+  return await clear(`${username}_friend_recommendations`);
+}
+
 module.exports = {
   redisSetGraph,
   redisGetGraph,
@@ -99,4 +116,7 @@ module.exports = {
   redisSetExtendedFriends,
   redisGetExtendedFriends,
   redisClearExtendedFriends,
+  redisSetFriendRecommendations,
+  redisGetFriendRecommendations,
+  redisClearFriendRecommendations,
 };

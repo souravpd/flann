@@ -8,7 +8,9 @@ const {
   build_graph,
   shortest_paths,
   load_friends,
+  load_recommendations,
 } = require("../middleware/graph_middlewares");
+const { verify } = require("jsonwebtoken");
 
 //Create Router
 const router = express.Router();
@@ -35,7 +37,13 @@ router.get(
 //Called when a user log in or accepts a request
 router.get(
   "/getRecommendations",
-  verify_token,
+  [
+    verify_token,
+    build_graph,
+    shortest_paths,
+    load_friends,
+    load_recommendations,
+  ],
   graphsController.getRecommendations
 );
 

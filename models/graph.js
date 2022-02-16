@@ -1,6 +1,7 @@
 const {
   redisGetFriends,
   redisGetExtendedFriends,
+  redisGetFriendRecommendations,
 } = require("../utils/redis_utils");
 
 module.exports.getFriends = function ({ username: username }) {
@@ -31,6 +32,25 @@ module.exports.getExtendedFriends = function ({ username: username }) {
       return reject();
     } else {
       return resolve({ extended_friends });
+    }
+  });
+};
+
+module.exports.getRecommendations = function ({ username: username }) {
+  return new Promise(async function (resolve, reject) {
+    let friend_recommendations;
+    try {
+      friend_recommendations = await redisGetFriendRecommendations(username);
+    } catch (error) {
+      return reject(error);
+    }
+    if (
+      friend_recommendations === null ||
+      friend_recommendations === undefined
+    ) {
+      return reject();
+    } else {
+      return resolve({ friend_recommendations: friend_recommendations });
     }
   });
 };
