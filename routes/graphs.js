@@ -31,6 +31,7 @@ router.get(
 );
 
 //This function calculates the Jaccard Coefficient of Similarity for Recommending New Friends
+//Jaccard Coefficient of Similarity is calculated using (N(mutual_friends)/N(total_friends))
 //Called when a user log in or accepts a request
 router.get(
   "/getRecommendations",
