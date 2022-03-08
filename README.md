@@ -95,7 +95,8 @@ Implemetation of a Social Networking Website
     └── verify_token.js // JWT Helper
 ```
 
-# API Documentation
+# Project: Flann
+### Implementation of a Social Networking Website with RDBMS and caching
 
 ## End-point: create_user
 ##### Create a new User
@@ -107,9 +108,9 @@ Implemetation of a Social Networking Website
 
 ```json
 {
-    "username":"name6",
-    "email":"name6@gmail.com",
-    "password":"6"
+    "username":"name12",
+    "email":"name12@gmail.com",
+    "password":"12"
 }
 ```
 
@@ -165,7 +166,7 @@ Implemetation of a Social Networking Website
 
 | Content-Type | Value                                                                                                                                                     |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ0Njc4ODMzLCJleHAiOjE2NDQ3NjUyMzN9.Z29Qi-w6fGzNAFI-LHAR7pYsnsil7CcWzYpdkCqULFg |
+| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ2NzM5OTM0LCJleHAiOjE2NDY4MjYzMzR9.LaitqwKImOzGbmML_ShT09Ogapje5r6NAUOXarOD4ns |
 
 
 ### Response: 200
@@ -246,14 +247,14 @@ Implemetation of a Social Networking Website
 
 | Content-Type | Value                                                                                                                                                     |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU2IiwiaWF0IjoxNjQzOTE0OTMxLCJleHAiOjE2NDQwMDEzMzF9.S5aNKOFBigWa8QnzVRXxVJSKjNkvWWzb-eoFBurtw1c |
+| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ2NzM5OTM0LCJleHAiOjE2NDY4MjYzMzR9.LaitqwKImOzGbmML_ShT09Ogapje5r6NAUOXarOD4ns |
 
 
 ### Body (**raw**)
 
 ```json
 {
-    "to_user":"name3"
+    "to_user":"name12"
 }
 ```
 
@@ -279,14 +280,14 @@ Implemetation of a Social Networking Website
 
 | Content-Type | Value                                                                                                                                                     |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU2IiwiaWF0IjoxNjQzOTE0OTMxLCJleHAiOjE2NDQwMDEzMzF9.S5aNKOFBigWa8QnzVRXxVJSKjNkvWWzb-eoFBurtw1c |
+| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ2NzM5OTM0LCJleHAiOjE2NDY4MjYzMzR9.LaitqwKImOzGbmML_ShT09Ogapje5r6NAUOXarOD4ns |
 
 
 ### Body (**raw**)
 
 ```json
 {
-    "request_id":"3p52tpzhmmr0g85ch6vub5"
+    "request_id":"2tgqfyx2h3d0h4vjc5k18s"
 }
 ```
 
@@ -321,7 +322,7 @@ Implemetation of a Social Networking Website
 
 | Content-Type | Value                                                                                                                                                     |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ0Njc4ODMzLCJleHAiOjE2NDQ3NjUyMzN9.Z29Qi-w6fGzNAFI-LHAR7pYsnsil7CcWzYpdkCqULFg |
+| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ2NzM5OTM0LCJleHAiOjE2NDY4MjYzMzR9.LaitqwKImOzGbmML_ShT09Ogapje5r6NAUOXarOD4ns |
 
 
 ### Body (**raw**)
@@ -373,7 +374,7 @@ Implemetation of a Social Networking Website
 
 | Content-Type | Value                                                                                                                                                     |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ0Njc4ODMzLCJleHAiOjE2NDQ3NjUyMzN9.Z29Qi-w6fGzNAFI-LHAR7pYsnsil7CcWzYpdkCqULFg |
+| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ2NzM5OTM0LCJleHAiOjE2NDY4MjYzMzR9.LaitqwKImOzGbmML_ShT09Ogapje5r6NAUOXarOD4ns |
 
 
 ### Body (**raw**)
@@ -410,7 +411,7 @@ Implemetation of a Social Networking Website
 
 | Content-Type | Value                                                                                                                                                     |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ0Njc4ODMzLCJleHAiOjE2NDQ3NjUyMzN9.Z29Qi-w6fGzNAFI-LHAR7pYsnsil7CcWzYpdkCqULFg |
+| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ2NzM5OTM0LCJleHAiOjE2NDY4MjYzMzR9.LaitqwKImOzGbmML_ShT09Ogapje5r6NAUOXarOD4ns |
 
 
 ### Response: 200
@@ -442,7 +443,7 @@ Implemetation of a Social Networking Website
 
 | Content-Type | Value                                                                                                                                                     |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ0Njc4ODMzLCJleHAiOjE2NDQ3NjUyMzN9.Z29Qi-w6fGzNAFI-LHAR7pYsnsil7CcWzYpdkCqULFg |
+| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ2NzM5OTM0LCJleHAiOjE2NDY4MjYzMzR9.LaitqwKImOzGbmML_ShT09Ogapje5r6NAUOXarOD4ns |
 
 
 ### Response: 200
@@ -475,16 +476,16 @@ Implemetation of a Social Networking Website
 
 | Content-Type | Value                                                                                                                                                     |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ0Njc4ODMzLCJleHAiOjE2NDQ3NjUyMzN9.Z29Qi-w6fGzNAFI-LHAR7pYsnsil7CcWzYpdkCqULFg |
+| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ2NzM5OTM0LCJleHAiOjE2NDY4MjYzMzR9.LaitqwKImOzGbmML_ShT09Ogapje5r6NAUOXarOD4ns |
 
 
 ### Body formdata
 
 | Param      | value                             | Type |
 | ---------- | --------------------------------- | ---- |
-| content    | This is an image upload by name7  | text |
-| visibility | 0                                 | text |
+| visibility | 2                                 | text |
 | img_src    | 5i9TjHK0S/silicate-structures.jpg | file |
+| content    | This is a new post                | text |
 
 
 ### Response: 200
@@ -637,3 +638,194 @@ Implemetation of a Social Networking Website
 >```
 >localhost:8000/static/uploads/2j74fi00qtw0xj9vj1fpx3gsilicate-structures.jpg
 >```
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: getRecommendations
+### Method: GET
+>```
+>localhost:8000/graphs/getRecommendations
+>```
+### Headers
+
+| Content-Type | Value                                                                                                                                                     |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ2NzM5OTM0LCJleHAiOjE2NDY4MjYzMzR9.LaitqwKImOzGbmML_ShT09Ogapje5r6NAUOXarOD4ns |
+
+
+### Response: 200
+```json
+{
+    "success": true,
+    "error": null,
+    "results": {
+        "friend_recommendations": [
+            {
+                "friend": "name4",
+                "probability": 0.5
+            },
+            {
+                "friend": "name10",
+                "probability": 0.25
+            },
+            {
+                "friend": "name6",
+                "probability": 0.25
+            },
+            {
+                "friend": "name2",
+                "probability": 0.2
+            },
+            {
+                "friend": "name8",
+                "probability": 0.2
+            },
+            {
+                "friend": "name9",
+                "probability": 0.17
+            },
+            {
+                "friend": "name1",
+                "probability": 0.14
+            },
+            {
+                "friend": "name3",
+                "probability": 0.14
+            },
+            {
+                "friend": "name11",
+                "probability": 0
+            },
+            {
+                "friend": "name5",
+                "probability": 0
+            },
+            {
+                "friend": "name7",
+                "probability": 0
+            }
+        ]
+    }
+}
+```
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: getSinglePublicPost
+### Method: GET
+>```
+>localhost:8000/posts/getSinglePublicPost
+>```
+### Headers
+
+| Content-Type | Value                                                                                                                                                     |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ2NzM5OTM0LCJleHAiOjE2NDY4MjYzMzR9.LaitqwKImOzGbmML_ShT09Ogapje5r6NAUOXarOD4ns |
+
+
+### Body (**raw**)
+
+```json
+{
+    "post_id": "1ueti9ar8q20f6r7ymm7izv"
+}
+```
+
+### Response: 200
+```json
+{
+    "success": true,
+    "error": null,
+    "results": {
+        "post_id": "1ueti9ar8q20f6r7ymm7izv",
+        "content": "This is an image upload by name7",
+        "visibility": "0",
+        "username": "name7",
+        "create_time": "2022-02-12T15:44:39.000Z",
+        "img_src": "static/uploads/1udo61a7du80ab8f3l9pxysilicate-structures.jpg"
+    }
+}
+```
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: getSingleFriendsPost
+### Method: GET
+>```
+>localhost:8000/posts/getSingleFriendsPost
+>```
+### Headers
+
+| Content-Type | Value                                                                                                                                                     |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ2NzMzNTgyLCJleHAiOjE2NDY4MTk5ODJ9.yTvii8BRjyP69-Tef-sa4qa-UMG7bYzDly6JwomeiME |
+
+
+### Body (**raw**)
+
+```json
+{
+    "post_id":"1ahgdicyy9d0bxkdswbonv4"
+}
+```
+
+### Response: 200
+```json
+{
+    "success": true,
+    "error": null,
+    "results": [
+        {
+            "post_id": "1ahgdicyy9d0bxkdswbonv4",
+            "content": "This is name1 second post only visibile to friends",
+            "visibility": "1",
+            "username": "name1",
+            "create_time": "2022-02-12T12:00:02.000Z",
+            "img_src": null
+        }
+    ]
+}
+```
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: getSingleExtendedFriendsPost
+### Method: GET
+>```
+>localhost:8000/posts/getSingleExtendedFriendsPost
+>```
+### Headers
+
+| Content-Type | Value                                                                                                                                                     |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ2NzMzNTgyLCJleHAiOjE2NDY4MTk5ODJ9.yTvii8BRjyP69-Tef-sa4qa-UMG7bYzDly6JwomeiME |
+
+
+### Body (**raw**)
+
+```json
+{
+    "post_id":"elevzp4uf1d0wkd7kcylxym"
+}
+```
+
+### Response: 200
+```json
+{
+    "success": true,
+    "error": null,
+    "results": [
+        {
+            "post_id": "elevzp4uf1d0wkd7kcylxym",
+            "content": "This is name1 first post",
+            "visibility": "2",
+            "username": "name5",
+            "create_time": "2022-02-12T11:59:21.000Z",
+            "img_src": null
+        }
+    ]
+}
+```

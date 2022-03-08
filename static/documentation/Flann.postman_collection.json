@@ -2,6 +2,7 @@
 	"info": {
 		"_postman_id": "75b7b50a-44e0-4c27-83bd-1aed8eb339f8",
 		"name": "Flann",
+		"description": "### Implementation of a Social Networking Website with RDBMS and caching",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -12,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"username\":\"name6\",\r\n    \"email\":\"name6@gmail.com\",\r\n    \"password\":\"6\"\r\n}",
+					"raw": "{\r\n    \"username\":\"name12\",\r\n    \"email\":\"name12@gmail.com\",\r\n    \"password\":\"12\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -196,7 +197,7 @@
 				"header": [
 					{
 						"key": "access_token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ0Njc4ODMzLCJleHAiOjE2NDQ3NjUyMzN9.Z29Qi-w6fGzNAFI-LHAR7pYsnsil7CcWzYpdkCqULFg",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ2NzM5OTM0LCJleHAiOjE2NDY4MjYzMzR9.LaitqwKImOzGbmML_ShT09Ogapje5r6NAUOXarOD4ns",
 						"type": "text"
 					}
 				],
@@ -358,13 +359,13 @@
 				"header": [
 					{
 						"key": "access_token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU2IiwiaWF0IjoxNjQzOTE0OTMxLCJleHAiOjE2NDQwMDEzMzF9.S5aNKOFBigWa8QnzVRXxVJSKjNkvWWzb-eoFBurtw1c",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ2NzM5OTM0LCJleHAiOjE2NDY4MjYzMzR9.LaitqwKImOzGbmML_ShT09Ogapje5r6NAUOXarOD4ns",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"to_user\":\"name3\"\r\n}",
+					"raw": "{\r\n    \"to_user\":\"name12\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -462,13 +463,13 @@
 				"header": [
 					{
 						"key": "access_token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU2IiwiaWF0IjoxNjQzOTE0OTMxLCJleHAiOjE2NDQwMDEzMzF9.S5aNKOFBigWa8QnzVRXxVJSKjNkvWWzb-eoFBurtw1c",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ2NzM5OTM0LCJleHAiOjE2NDY4MjYzMzR9.LaitqwKImOzGbmML_ShT09Ogapje5r6NAUOXarOD4ns",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"request_id\":\"3p52tpzhmmr0g85ch6vub5\"\r\n}",
+					"raw": "{\r\n    \"request_id\":\"2tgqfyx2h3d0h4vjc5k18s\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -566,7 +567,7 @@
 				"header": [
 					{
 						"key": "access_token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ0Njc4ODMzLCJleHAiOjE2NDQ3NjUyMzN9.Z29Qi-w6fGzNAFI-LHAR7pYsnsil7CcWzYpdkCqULFg",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ2NzM5OTM0LCJleHAiOjE2NDY4MjYzMzR9.LaitqwKImOzGbmML_ShT09Ogapje5r6NAUOXarOD4ns",
 						"type": "text"
 					}
 				],
@@ -670,7 +671,7 @@
 				"header": [
 					{
 						"key": "access_token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ0Njc4ODMzLCJleHAiOjE2NDQ3NjUyMzN9.Z29Qi-w6fGzNAFI-LHAR7pYsnsil7CcWzYpdkCqULFg",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ2NzM5OTM0LCJleHAiOjE2NDY4MjYzMzR9.LaitqwKImOzGbmML_ShT09Ogapje5r6NAUOXarOD4ns",
 						"type": "text"
 					}
 				],
@@ -774,7 +775,7 @@
 				"header": [
 					{
 						"key": "access_token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ0Njc4ODMzLCJleHAiOjE2NDQ3NjUyMzN9.Z29Qi-w6fGzNAFI-LHAR7pYsnsil7CcWzYpdkCqULFg",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ2NzM5OTM0LCJleHAiOjE2NDY4MjYzMzR9.LaitqwKImOzGbmML_ShT09Ogapje5r6NAUOXarOD4ns",
 						"type": "text"
 					}
 				],
@@ -860,7 +861,7 @@
 				"header": [
 					{
 						"key": "access_token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ0Njc4ODMzLCJleHAiOjE2NDQ3NjUyMzN9.Z29Qi-w6fGzNAFI-LHAR7pYsnsil7CcWzYpdkCqULFg",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ2NzM5OTM0LCJleHAiOjE2NDY4MjYzMzR9.LaitqwKImOzGbmML_ShT09Ogapje5r6NAUOXarOD4ns",
 						"type": "text"
 					}
 				],
@@ -946,7 +947,7 @@
 				"header": [
 					{
 						"key": "access_token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ0Njc4ODMzLCJleHAiOjE2NDQ3NjUyMzN9.Z29Qi-w6fGzNAFI-LHAR7pYsnsil7CcWzYpdkCqULFg",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ2NzM5OTM0LCJleHAiOjE2NDY4MjYzMzR9.LaitqwKImOzGbmML_ShT09Ogapje5r6NAUOXarOD4ns",
 						"type": "text"
 					}
 				],
@@ -954,19 +955,19 @@
 					"mode": "formdata",
 					"formdata": [
 						{
-							"key": "content",
-							"value": "This is an image upload by name7",
-							"type": "text"
-						},
-						{
 							"key": "visibility",
-							"value": "0",
+							"value": "2",
 							"type": "text"
 						},
 						{
 							"key": "img_src",
 							"type": "file",
 							"src": "5i9TjHK0S/silicate-structures.jpg"
+						},
+						{
+							"key": "content",
+							"value": "This is a new post",
+							"type": "text"
 						}
 					]
 				},
@@ -1343,6 +1344,409 @@
 				"description": "##### Get Image from static"
 			},
 			"response": []
+		},
+		{
+			"name": "getRecommendations",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ2NzM5OTM0LCJleHAiOjE2NDY4MjYzMzR9.LaitqwKImOzGbmML_ShT09Ogapje5r6NAUOXarOD4ns",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/graphs/getRecommendations",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"graphs",
+						"getRecommendations"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getRecommendations",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ2NzM5OTM0LCJleHAiOjE2NDY4MjYzMzR9.LaitqwKImOzGbmML_ShT09Ogapje5r6NAUOXarOD4ns",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/graphs/getRecommendations",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"graphs",
+								"getRecommendations"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "476"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1dc-KLm4okLToxNUhm4KgtycaMkkjaE\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Mar 2022 11:52:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"error\": null,\n    \"results\": {\n        \"friend_recommendations\": [\n            {\n                \"friend\": \"name4\",\n                \"probability\": 0.5\n            },\n            {\n                \"friend\": \"name10\",\n                \"probability\": 0.25\n            },\n            {\n                \"friend\": \"name6\",\n                \"probability\": 0.25\n            },\n            {\n                \"friend\": \"name2\",\n                \"probability\": 0.2\n            },\n            {\n                \"friend\": \"name8\",\n                \"probability\": 0.2\n            },\n            {\n                \"friend\": \"name9\",\n                \"probability\": 0.17\n            },\n            {\n                \"friend\": \"name1\",\n                \"probability\": 0.14\n            },\n            {\n                \"friend\": \"name3\",\n                \"probability\": 0.14\n            },\n            {\n                \"friend\": \"name11\",\n                \"probability\": 0\n            },\n            {\n                \"friend\": \"name5\",\n                \"probability\": 0\n            },\n            {\n                \"friend\": \"name7\",\n                \"probability\": 0\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "getSinglePublicPost",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ2NzM5OTM0LCJleHAiOjE2NDY4MjYzMzR9.LaitqwKImOzGbmML_ShT09Ogapje5r6NAUOXarOD4ns",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"post_id\": \"1ueti9ar8q20f6r7ymm7izv\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/posts/getSinglePublicPost",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"posts",
+						"getSinglePublicPost"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getSinglePublicPost",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ2NzM5OTM0LCJleHAiOjE2NDY4MjYzMzR9.LaitqwKImOzGbmML_ShT09Ogapje5r6NAUOXarOD4ns",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"post_id\": \"1ueti9ar8q20f6r7ymm7izv\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/posts/getSinglePublicPost",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"posts",
+								"getSinglePublicPost"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "272"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"110-I+sOezpXS1jUoRl/ImhzH4rz5kY\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Mar 2022 11:53:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"error\": null,\n    \"results\": {\n        \"post_id\": \"1ueti9ar8q20f6r7ymm7izv\",\n        \"content\": \"This is an image upload by name7\",\n        \"visibility\": \"0\",\n        \"username\": \"name7\",\n        \"create_time\": \"2022-02-12T15:44:39.000Z\",\n        \"img_src\": \"static/uploads/1udo61a7du80ab8f3l9pxysilicate-structures.jpg\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "getSingleFriendsPost",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ2NzMzNTgyLCJleHAiOjE2NDY4MTk5ODJ9.yTvii8BRjyP69-Tef-sa4qa-UMG7bYzDly6JwomeiME",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"post_id\":\"1ahgdicyy9d0bxkdswbonv4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/posts/getSingleFriendsPost",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"posts",
+						"getSingleFriendsPost"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getSingleFriendsPost",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ2NzMzNTgyLCJleHAiOjE2NDY4MTk5ODJ9.yTvii8BRjyP69-Tef-sa4qa-UMG7bYzDly6JwomeiME",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"post_id\":\"1ahgdicyy9d0bxkdswbonv4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/posts/getSingleFriendsPost",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"posts",
+								"getSingleFriendsPost"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "234"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ea-ywPqysQhqdCU2vg2UpQpKTzJKXg\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Mar 2022 11:54:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"error\": null,\n    \"results\": [\n        {\n            \"post_id\": \"1ahgdicyy9d0bxkdswbonv4\",\n            \"content\": \"This is name1 second post only visibile to friends\",\n            \"visibility\": \"1\",\n            \"username\": \"name1\",\n            \"create_time\": \"2022-02-12T12:00:02.000Z\",\n            \"img_src\": null\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "getSingleExtendedFriendsPost",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ2NzMzNTgyLCJleHAiOjE2NDY4MTk5ODJ9.yTvii8BRjyP69-Tef-sa4qa-UMG7bYzDly6JwomeiME",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"post_id\":\"elevzp4uf1d0wkd7kcylxym\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/posts/getSingleExtendedFriendsPost",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"posts",
+						"getSingleExtendedFriendsPost"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getSingleExtendedFriendsPost",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ2NzMzNTgyLCJleHAiOjE2NDY4MTk5ODJ9.yTvii8BRjyP69-Tef-sa4qa-UMG7bYzDly6JwomeiME",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"post_id\":\"elevzp4uf1d0wkd7kcylxym\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/posts/getSingleExtendedFriendsPost",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"posts",
+								"getSingleExtendedFriendsPost"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "208"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d0-Co3Yt51OA+M6MqHg0w5C6ic5DE0\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Mar 2022 11:54:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"error\": null,\n    \"results\": [\n        {\n            \"post_id\": \"elevzp4uf1d0wkd7kcylxym\",\n            \"content\": \"This is name1 first post\",\n            \"visibility\": \"2\",\n            \"username\": \"name5\",\n            \"create_time\": \"2022-02-12T11:59:21.000Z\",\n            \"img_src\": null\n        }\n    ]\n}"
+				}
+			]
 		}
 	]
 }
