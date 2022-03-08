@@ -7,6 +7,7 @@ const {
 } = require("../utils/redis_utils");
 const { uid } = require("../utils/uid");
 
+//@audit Image has to be Optional
 module.exports.createPost = function ({
   username: username,
   content: content,
