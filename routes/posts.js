@@ -46,10 +46,10 @@ router.get(
   postsController.getSingleFriendsPost
 );
 
-// router.get(
-//   "/getSingleExtendedFriendsPost",
-//   [verify_token, build_graph, shortest_paths, load_friends],
-//   postsController.getSingleExtendedFriendsPost
-// );
+router.get(
+  "/getSingleExtendedFriendsPost",
+  [verify_token, build_graph, shortest_paths, load_friends],
+  postsController.getSingleExtendedFriendsPost
+);
 
 module.exports = router;

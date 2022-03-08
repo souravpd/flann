@@ -150,3 +150,41 @@ module.exports.getSingleFriendsPost = function ({
     );
   });
 };
+
+module.exports.getSingleExtendedFriendsPost = function ({
+  post_id: post_id,
+  username: username,
+}) {
+  return new Promise(async function (resolve, reject) {
+    pool.query(
+      `SELECT * FROM posts WHERE post_id=? AND visibility=?`,
+      [post_id, "2"],
+      async function (error, results) {
+        if (error) {
+          return reject(error);
+        } else if (results.length == 0) {
+          return reject("Post with such id doesnot exits");
+        } else {
+          let rows = Object.values(JSON.parse(JSON.stringify(results)));
+          let user_extended_friends;
+          try {
+            user_extended_friends = new Set(
+              await redisGetExtendedFriends(username)
+            );
+          } catch (error) {
+            return reject(error);
+          }
+          extended_friends_post = rows.filter(function (row) {
+            return user_extended_friends.has(row.username);
+          });
+
+          if (extended_friends_post.length == 0) {
+            return reject("Not Authorized");
+          }
+
+          return resolve(extended_friends_post);
+        }
+      }
+    );
+  });
+};

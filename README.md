@@ -19,7 +19,7 @@ Implemetation of a Social Networking Website
 - [X] Display Friend Posts
 - [X] Display Posts of Friend of Friends
 - [X] Implement Image Upload
-- [ ] Implement Get Single Post
+- [X] Implement Get Single Post
 - [ ] Implement Likes on Posts
 - [ ] Implement Comments on Posts
 - [ ] Implement HashTags
@@ -163,9 +163,9 @@ Implemetation of a Social Networking Website
 >```
 ### Headers
 
-|Content-Type|Value|
-|---|---|
-|access_token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ0Njc4ODMzLCJleHAiOjE2NDQ3NjUyMzN9.Z29Qi-w6fGzNAFI-LHAR7pYsnsil7CcWzYpdkCqULFg|
+| Content-Type | Value                                                                                                                                                     |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ0Njc4ODMzLCJleHAiOjE2NDQ3NjUyMzN9.Z29Qi-w6fGzNAFI-LHAR7pYsnsil7CcWzYpdkCqULFg |
 
 
 ### Response: 200
@@ -244,9 +244,9 @@ Implemetation of a Social Networking Website
 >```
 ### Headers
 
-|Content-Type|Value|
-|---|---|
-|access_token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU2IiwiaWF0IjoxNjQzOTE0OTMxLCJleHAiOjE2NDQwMDEzMzF9.S5aNKOFBigWa8QnzVRXxVJSKjNkvWWzb-eoFBurtw1c|
+| Content-Type | Value                                                                                                                                                     |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU2IiwiaWF0IjoxNjQzOTE0OTMxLCJleHAiOjE2NDQwMDEzMzF9.S5aNKOFBigWa8QnzVRXxVJSKjNkvWWzb-eoFBurtw1c |
 
 
 ### Body (**raw**)
@@ -277,9 +277,9 @@ Implemetation of a Social Networking Website
 >```
 ### Headers
 
-|Content-Type|Value|
-|---|---|
-|access_token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU2IiwiaWF0IjoxNjQzOTE0OTMxLCJleHAiOjE2NDQwMDEzMzF9.S5aNKOFBigWa8QnzVRXxVJSKjNkvWWzb-eoFBurtw1c|
+| Content-Type | Value                                                                                                                                                     |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU2IiwiaWF0IjoxNjQzOTE0OTMxLCJleHAiOjE2NDQwMDEzMzF9.S5aNKOFBigWa8QnzVRXxVJSKjNkvWWzb-eoFBurtw1c |
 
 
 ### Body (**raw**)
@@ -319,9 +319,9 @@ Implemetation of a Social Networking Website
 >```
 ### Headers
 
-|Content-Type|Value|
-|---|---|
-|access_token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ0Njc4ODMzLCJleHAiOjE2NDQ3NjUyMzN9.Z29Qi-w6fGzNAFI-LHAR7pYsnsil7CcWzYpdkCqULFg|
+| Content-Type | Value                                                                                                                                                     |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ0Njc4ODMzLCJleHAiOjE2NDQ3NjUyMzN9.Z29Qi-w6fGzNAFI-LHAR7pYsnsil7CcWzYpdkCqULFg |
 
 
 ### Body (**raw**)
@@ -371,9 +371,9 @@ Implemetation of a Social Networking Website
 >```
 ### Headers
 
-|Content-Type|Value|
-|---|---|
-|access_token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ0Njc4ODMzLCJleHAiOjE2NDQ3NjUyMzN9.Z29Qi-w6fGzNAFI-LHAR7pYsnsil7CcWzYpdkCqULFg|
+| Content-Type | Value                                                                                                                                                     |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ0Njc4ODMzLCJleHAiOjE2NDQ3NjUyMzN9.Z29Qi-w6fGzNAFI-LHAR7pYsnsil7CcWzYpdkCqULFg |
 
 
 ### Body (**raw**)
@@ -408,9 +408,9 @@ Implemetation of a Social Networking Website
 >```
 ### Headers
 
-|Content-Type|Value|
-|---|---|
-|access_token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ0Njc4ODMzLCJleHAiOjE2NDQ3NjUyMzN9.Z29Qi-w6fGzNAFI-LHAR7pYsnsil7CcWzYpdkCqULFg|
+| Content-Type | Value                                                                                                                                                     |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ0Njc4ODMzLCJleHAiOjE2NDQ3NjUyMzN9.Z29Qi-w6fGzNAFI-LHAR7pYsnsil7CcWzYpdkCqULFg |
 
 
 ### Response: 200
@@ -440,9 +440,9 @@ Implemetation of a Social Networking Website
 >```
 ### Headers
 
-|Content-Type|Value|
-|---|---|
-|access_token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ0Njc4ODMzLCJleHAiOjE2NDQ3NjUyMzN9.Z29Qi-w6fGzNAFI-LHAR7pYsnsil7CcWzYpdkCqULFg|
+| Content-Type | Value                                                                                                                                                     |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ0Njc4ODMzLCJleHAiOjE2NDQ3NjUyMzN9.Z29Qi-w6fGzNAFI-LHAR7pYsnsil7CcWzYpdkCqULFg |
 
 
 ### Response: 200
@@ -473,18 +473,18 @@ Implemetation of a Social Networking Website
 >```
 ### Headers
 
-|Content-Type|Value|
-|---|---|
-|access_token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ0Njc4ODMzLCJleHAiOjE2NDQ3NjUyMzN9.Z29Qi-w6fGzNAFI-LHAR7pYsnsil7CcWzYpdkCqULFg|
+| Content-Type | Value                                                                                                                                                     |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ0Njc4ODMzLCJleHAiOjE2NDQ3NjUyMzN9.Z29Qi-w6fGzNAFI-LHAR7pYsnsil7CcWzYpdkCqULFg |
 
 
 ### Body formdata
 
-|Param|value|Type|
-|---|---|---|
-|content|This is an image upload by name7|text|
-|visibility|0|text|
-|img_src|5i9TjHK0S/silicate-structures.jpg|file|
+| Param      | value                             | Type |
+| ---------- | --------------------------------- | ---- |
+| content    | This is an image upload by name7  | text |
+| visibility | 0                                 | text |
+| img_src    | 5i9TjHK0S/silicate-structures.jpg | file |
 
 
 ### Response: 200
@@ -506,9 +506,9 @@ Implemetation of a Social Networking Website
 >```
 ### Headers
 
-|Content-Type|Value|
-|---|---|
-|access_token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWUxIiwiaWF0IjoxNjQ0NjY2NzQyLCJleHAiOjE2NDQ3NTMxNDJ9.yVAfzNysgpiuriVa-UurvLB9Bt2teapQBT3uBlawUFE|
+| Content-Type | Value                                                                                                                                                     |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWUxIiwiaWF0IjoxNjQ0NjY2NzQyLCJleHAiOjE2NDQ3NTMxNDJ9.yVAfzNysgpiuriVa-UurvLB9Bt2teapQBT3uBlawUFE |
 
 
 ### Response: 200
@@ -580,9 +580,9 @@ Implemetation of a Social Networking Website
 >```
 ### Headers
 
-|Content-Type|Value|
-|---|---|
-|access_token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ0Njc4ODMzLCJleHAiOjE2NDQ3NjUyMzN9.Z29Qi-w6fGzNAFI-LHAR7pYsnsil7CcWzYpdkCqULFg|
+| Content-Type | Value                                                                                                                                                     |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ0Njc4ODMzLCJleHAiOjE2NDQ3NjUyMzN9.Z29Qi-w6fGzNAFI-LHAR7pYsnsil7CcWzYpdkCqULFg |
 
 
 ### Response: 200
@@ -605,9 +605,9 @@ Implemetation of a Social Networking Website
 >```
 ### Headers
 
-|Content-Type|Value|
-|---|---|
-|access_token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ0Njc4ODMzLCJleHAiOjE2NDQ3NjUyMzN9.Z29Qi-w6fGzNAFI-LHAR7pYsnsil7CcWzYpdkCqULFg|
+| Content-Type | Value                                                                                                                                                     |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| access_token | eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWU3IiwiaWF0IjoxNjQ0Njc4ODMzLCJleHAiOjE2NDQ3NjUyMzN9.Z29Qi-w6fGzNAFI-LHAR7pYsnsil7CcWzYpdkCqULFg |
 
 
 ### Response: 200
