@@ -97,3 +97,21 @@ module.exports.getAllExtendedFriendsPosts = function ({ username: username }) {
     );
   });
 };
+
+module.exports.getSinglePublicPost = function ({ post_id: post_id }) {
+  return new Promise(async function (resolve, reject) {
+    pool.query(
+      `SELECT * FROM posts WHERE post_id=?`,
+      [post_id],
+      async function (error, results) {
+        if (error) {
+          return reject(error);
+        } else if (results.length == 0) {
+          return reject("No Post with such id exits");
+        } else {
+          return resolve(results[0]);
+        }
+      }
+    );
+  });
+};

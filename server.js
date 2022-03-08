@@ -2,6 +2,7 @@
 const express = require("express");
 const path = require("path");
 const dotenv = require("dotenv").config();
+const morgan = require("morgan");
 
 //Define Router Files
 const indexRouter = require("./routes/index");
@@ -20,13 +21,14 @@ app.use(express.json());
 //Static Routes
 app.use("/static", express.static("./static"));
 
+//Logging with morgan
+app.use(morgan("tiny"));
 //Define Routes
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/friends", friendsRouter);
 app.use("/graphs", graphsRouter);
 app.use("/posts", postsRouter);
-
 //Create the Server
 app.listen(port, function (err) {
   if (err) {

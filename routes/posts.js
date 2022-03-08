@@ -33,4 +33,23 @@ router.get(
   postsController.getAllExtendedFriendsPosts
 );
 
+//Get Single Posts
+router.get(
+  "/getSinglePublicPost",
+  verify_token,
+  postsController.getSinglePublicPost
+);
+
+// router.get(
+//   "/getSingleFriendsPost",
+//   [verify_token, build_graph, shortest_paths, load_friends],
+//   postsController.getSingleFriendsPost
+// );
+
+// router.get(
+//   "/getSingleExtendedFriendsPost",
+//   [verify_token, build_graph, shortest_paths, load_friends],
+//   postsController.getSingleExtendedFriendsPost
+// );
+
 module.exports = router;
