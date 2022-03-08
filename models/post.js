@@ -101,8 +101,8 @@ module.exports.getAllExtendedFriendsPosts = function ({ username: username }) {
 module.exports.getSinglePublicPost = function ({ post_id: post_id }) {
   return new Promise(async function (resolve, reject) {
     pool.query(
-      `SELECT * FROM posts WHERE post_id=?`,
-      [post_id],
+      `SELECT * FROM posts WHERE post_id=? AND visibility=?`,
+      [post_id, "0"],
       async function (error, results) {
         if (error) {
           return reject(error);
@@ -110,6 +110,41 @@ module.exports.getSinglePublicPost = function ({ post_id: post_id }) {
           return reject("No Post with such id exits");
         } else {
           return resolve(results[0]);
+        }
+      }
+    );
+  });
+};
+
+//Get single friends post => check if the user is authorized to see this post
+module.exports.getSingleFriendsPost = function ({
+  post_id: post_id,
+  username: username,
+}) {
+  return new Promise(async function (resolve, reject) {
+    pool.query(
+      `SELECT * FROM posts WHERE post_id=? AND visibility=?`,
+      [post_id, "1"],
+      async function (error, results) {
+        if (error) {
+          return reject(error);
+        } else if (results.length == 0) {
+          return reject("Post with such id doesnot exits");
+        } else {
+          let rows = Object.values(JSON.parse(JSON.stringify(results)));
+          let user_friends;
+          try {
+            user_friends = new Set(await redisGetFriends(username));
+          } catch (error) {
+            return reject(error);
+          }
+          friends_post = rows.filter(function (row) {
+            return user_friends.has(row.username);
+          });
+          if (friends_post.length == 0) {
+            return reject("Not Authorized");
+          }
+          return resolve(friends_post);
         }
       }
     );

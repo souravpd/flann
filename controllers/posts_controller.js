@@ -1,3 +1,4 @@
+const { json } = require("express/lib/response");
 const Post = require("../models/post");
 
 module.exports.createPost = function (request, response) {
@@ -93,7 +94,27 @@ module.exports.getSinglePublicPost = function (request, response) {
     .catch(function (error) {
       return response.status(400).json({
         success: false,
+        error: error,
+        results: null,
+      });
+    });
+};
+
+module.exports.getSingleFriendsPost = function (request, response) {
+  let username = request.auth.username;
+  let post_id = request.body.post_id;
+  Post.getSingleFriendsPost({ username: username, post_id: post_id })
+    .then(function (results) {
+      return response.status(200).json({
+        success: true,
         error: null,
+        results: results,
+      });
+    })
+    .catch(function (error) {
+      return response.status(400).json({
+        success: false,
+        error: error,
         results: null,
       });
     });

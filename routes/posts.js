@@ -40,11 +40,11 @@ router.get(
   postsController.getSinglePublicPost
 );
 
-// router.get(
-//   "/getSingleFriendsPost",
-//   [verify_token, build_graph, shortest_paths, load_friends],
-//   postsController.getSingleFriendsPost
-// );
+router.get(
+  "/getSingleFriendsPost",
+  [verify_token, build_graph, shortest_paths, load_friends],
+  postsController.getSingleFriendsPost
+);
 
 // router.get(
 //   "/getSingleExtendedFriendsPost",
