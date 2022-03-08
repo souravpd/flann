@@ -20,7 +20,7 @@ Implemetation of a Social Networking Website
 - [X] Display Posts of Friend of Friends
 - [X] Implement Image Upload
 - [X] Implement Get Single Post
-- [ ] Implement Likes on Posts
+- [X] Implement Likes on Posts
 - [ ] Implement Comments on Posts
 - [ ] Implement HashTags
 - [ ] Implement Profile Updates

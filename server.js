@@ -10,6 +10,7 @@ const usersRouter = require("./routes/users");
 const friendsRouter = require("./routes/friends");
 const graphsRouter = require("./routes/graphs");
 const postsRouter = require("./routes/posts");
+const likesRouter = require("./routes/likes");
 
 //Define Port
 const port = process.env.PORT;
@@ -29,6 +30,8 @@ app.use("/users", usersRouter);
 app.use("/friends", friendsRouter);
 app.use("/graphs", graphsRouter);
 app.use("/posts", postsRouter);
+app.use("/likes", likesRouter);
+
 //Create the Server
 app.listen(port, function (err) {
   if (err) {

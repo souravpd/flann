@@ -1,8 +1,6 @@
-const { json } = require("express/lib/response");
 const Post = require("../models/post");
 
 module.exports.createPost = function (request, response) {
-  console.log(request.auth.username);
   let form_data = {
     username: request.auth.username,
     content: request.body.content,
