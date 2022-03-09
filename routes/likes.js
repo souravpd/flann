@@ -19,6 +19,7 @@ router.post(
   [verify_token, build_graph, shortest_paths, load_friends, verify_access],
   likesController.like
 );
+
 router.post(
   "/unlike",
   [verify_token, build_graph, shortest_paths, load_friends, verify_access],
