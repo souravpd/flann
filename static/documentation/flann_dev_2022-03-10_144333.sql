@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.27, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.28, for Linux (x86_64)
 --
 -- Host: 127.0.0.1    Database: flann_dev
 -- ------------------------------------------------------
--- Server version	8.0.27-0ubuntu0.20.04.1
+-- Server version	8.0.28-0ubuntu0.20.04.3
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
@@ -14,27 +14,67 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 --
--- Table structure for table `friend_requests`
+-- Table structure for table `comments`
 --
-DROP TABLE IF EXISTS `friend_requests`;
+DROP TABLE IF EXISTS `comments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `friend_requests` (
-  `from_user` varchar(255) NOT NULL COMMENT 'From User',
-  `to_user` varchar(255) NOT NULL COMMENT 'To User',
-  `friendship_status` enum('0', '1', '2') DEFAULT NULL COMMENT 'Friendship Status',
+CREATE TABLE `comments` (
+  `comment_id` varchar(255) NOT NULL COMMENT 'Primary Key',
+  `post_id` varchar(255) NOT NULL COMMENT 'Post ID',
+  `username` varchar(255) NOT NULL COMMENT 'Username',
+  `content` varchar(255) DEFAULT NULL COMMENT 'Content',
   `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT 'Create Time',
-  `request_id` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`from_user`, `to_user`),
-  KEY `to_user` (`to_user`),
-  CONSTRAINT `friend_requests_ibfk_1` FOREIGN KEY (`from_user`) REFERENCES `users` (`username`),
-  CONSTRAINT `friend_requests_ibfk_2` FOREIGN KEY (`to_user`) REFERENCES `users` (`username`)
+  PRIMARY KEY (`comment_id`),
+  KEY `comments_ibfk_1` (`post_id`),
+  KEY `comments_ibfk_2` (`username`),
+  CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `posts` (`post_id`),
+  CONSTRAINT `comments_ibfk_2` FOREIGN KEY (`username`) REFERENCES `users` (`username`)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 --
--- Dumping data for table `friend_requests`
+-- Dumping data for table `comments`
 --
-/*!40000 ALTER TABLE `friend_requests` DISABLE KEYS */;
+/*!40000 ALTER TABLE `comments` DISABLE KEYS */;
+INSERT INTO
+  `comments`
+VALUES
+  (
+    '221fm17t2fn072jkmf4xyci',
+    '45rg7l2p5t806rtlh5u2qkr',
+    'name7',
+    'This is a comment by name7',
+    '2022-03-10 14:34:53'
+  ),(
+    '3x37dts5f6y0pjw17t7g1e',
+    '45rg7l2p5t806rtlh5u2qkr',
+    'name7',
+    'This is another comment',
+    '2022-03-10 14:36:20'
+  );
+  /*!40000 ALTER TABLE `comments` ENABLE KEYS */;
+--
+  -- Table structure for table `friend_requests`
+  --
+  DROP TABLE IF EXISTS `friend_requests`;
+  /*!40101 SET @saved_cs_client     = @@character_set_client */;
+  /*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `friend_requests` (
+    `from_user` varchar(255) NOT NULL COMMENT 'From User',
+    `to_user` varchar(255) NOT NULL COMMENT 'To User',
+    `friendship_status` enum('0', '1', '2') DEFAULT NULL COMMENT 'Friendship Status',
+    `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT 'Create Time',
+    `request_id` varchar(255) DEFAULT NULL,
+    PRIMARY KEY (`from_user`, `to_user`),
+    KEY `to_user` (`to_user`),
+    CONSTRAINT `friend_requests_ibfk_1` FOREIGN KEY (`from_user`) REFERENCES `users` (`username`),
+    CONSTRAINT `friend_requests_ibfk_2` FOREIGN KEY (`to_user`) REFERENCES `users` (`username`)
+  ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb3;
+  /*!40101 SET character_set_client = @saved_cs_client */;
+--
+  -- Dumping data for table `friend_requests`
+  --
+  /*!40000 ALTER TABLE `friend_requests` DISABLE KEYS */;
 INSERT INTO
   `friend_requests`
 VALUES
@@ -74,6 +114,12 @@ VALUES
     '1',
     '2022-02-04 14:13:43',
     'jw6jo4c173a0qgneysldyx'
+  ),(
+    'name7',
+    'name12',
+    '1',
+    '2022-03-08 17:16:45',
+    '2tgqfyx2h3d0h4vjc5k18s'
   ),(
     'name7',
     'name3',
@@ -123,8 +169,41 @@ CREATE TABLE `friends` (
 INSERT INTO
   `friends`
 VALUES
-  ('name1', 'name2', '2022-02-04 15:57:46'),('name1', 'name3', '2022-02-04 15:58:10'),('name1', 'name4', '2022-02-04 15:58:22'),('name2', 'name5', '2022-02-04 15:58:37'),('name3', 'name4', '2022-02-04 14:16:23'),('name3', 'name6', '2022-02-04 15:58:47'),('name6', 'name7', '2022-02-04 15:59:03'),('name7', 'name3', '2022-02-12 21:13:17'),('name7', 'name8', '2022-02-04 14:15:51'),('name7', 'name9', '2022-02-04 14:16:09'),('name8', 'name9', '2022-02-04 14:16:23'),('name9', 'name10', '2022-02-04 14:16:23');
+  ('name1', 'name2', '2022-02-04 15:57:46'),('name1', 'name3', '2022-02-04 15:58:10'),('name1', 'name4', '2022-02-04 15:58:22'),('name1', 'name7', '2022-02-04 15:59:03'),('name2', 'name5', '2022-02-04 15:58:37'),('name3', 'name4', '2022-02-04 14:16:23'),('name3', 'name6', '2022-02-04 15:58:47'),('name7', 'name12', '2022-03-08 17:17:29'),('name7', 'name3', '2022-02-12 21:13:17'),('name7', 'name8', '2022-02-04 14:15:51'),('name7', 'name9', '2022-02-04 14:16:09'),('name8', 'name9', '2022-02-04 14:16:23'),('name9', 'name10', '2022-02-04 14:16:23');
   /*!40000 ALTER TABLE `friends` ENABLE KEYS */;
+--
+  -- Table structure for table `likes`
+  --
+  DROP TABLE IF EXISTS `likes`;
+  /*!40101 SET @saved_cs_client     = @@character_set_client */;
+  /*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `likes` (
+    `username` varchar(255) NOT NULL COMMENT 'Username',
+    `post_id` varchar(255) NOT NULL COMMENT 'Post ID',
+    `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT 'Create Time',
+    PRIMARY KEY (`username`, `post_id`),
+    KEY `likes_ibfk_2` (`post_id`),
+    CONSTRAINT `likes_ibfk_1` FOREIGN KEY (`username`) REFERENCES `users` (`username`),
+    CONSTRAINT `likes_ibfk_2` FOREIGN KEY (`post_id`) REFERENCES `posts` (`post_id`)
+  ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb3;
+  /*!40101 SET character_set_client = @saved_cs_client */;
+--
+  -- Dumping data for table `likes`
+  --
+  /*!40000 ALTER TABLE `likes` DISABLE KEYS */;
+INSERT INTO
+  `likes`
+VALUES
+  (
+    'name7',
+    '2eufvri9hwa0c8d9au5cjtv',
+    '2022-03-08 20:09:14'
+  ),(
+    'name7',
+    '38pr18c8m2g0n7bw6k27w4',
+    '2022-03-08 20:17:31'
+  );
+  /*!40000 ALTER TABLE `likes` ENABLE KEYS */;
 --
   -- Table structure for table `posts`
   --
@@ -154,14 +233,14 @@ VALUES
     '1ahgdicyy9d0bxkdswbonv4',
     'This is name1 second post only visibile to friends',
     '1',
-    'name1',
+    'name4',
     '2022-02-12 17:30:02',
     NULL
   ),(
     '1r09inox2xp0vk6l97rp1oo',
     'This is name1 third post visibile to friends_of_friends',
     '2',
-    'name1',
+    'name5',
     '2022-02-12 17:30:24',
     NULL
   ),(
@@ -186,6 +265,13 @@ VALUES
     '2022-02-12 20:50:35',
     'static/uploads/2j74fi00qtw0xj9vj1fpx3gsilicate-structures.jpg'
   ),(
+    '38pr18c8m2g0n7bw6k27w4',
+    'This is a new post created by user 12',
+    '1',
+    'name12',
+    '2022-03-08 20:11:31',
+    'static/uploads/38pomg5dht905xyznccdp7hresume.cls'
+  ),(
     '3jwu5u5beje0kxbdowuespj',
     'This is an image upload by name7',
     '0',
@@ -200,10 +286,17 @@ VALUES
     '2022-02-12 20:45:45',
     'static/uploads/45q74ijjrob0zb86r44myysilicate-structures.jpg'
   ),(
+    '8k1pjf0fd5o0buzjq4rr5',
+    'This is a new post',
+    '2',
+    'name7',
+    '2022-03-08 17:21:13',
+    'static/uploads/8k0c04is7jn0ntl8mmth25csilicate-structures.jpg'
+  ),(
     'elevzp4uf1d0wkd7kcylxym',
     'This is name1 first post',
-    '0',
-    'name1',
+    '2',
+    'name5',
     '2022-02-12 17:29:21',
     NULL
   );
@@ -244,6 +337,11 @@ VALUES
     'name11@gmail.com',
     '$2a$10$bfdv2o9zM9JDqmPEt4OlWeXSQ/RG8WEeiUtDqHnB.bGX/ElhlCwIG',
     '2022-02-12 21:10:16'
+  ),(
+    'name12',
+    'name12@gmail.com',
+    '$2a$10$IIDC7YkmqVjOfLawzCfbHuK/caeXwGuFy1VAAmvti9ZVda2p7sTra',
+    '2022-03-08 17:15:23'
   ),(
     'name2',
     'name2@gmail.com',
@@ -294,4 +392,4 @@ VALUES
   /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
   /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
   /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
--- Dump completed on 2022-02-12 22:20:37
+-- Dump completed on 2022-03-10 14:43:52

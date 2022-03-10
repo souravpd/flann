@@ -22,7 +22,7 @@ Implemetation of a Social Networking Website
 - [X] Implement Get Single Post
 - [X] Implement Likes on Posts
 - [X] Implement Comments on Posts
-- [ ] Implement HashTags
+- [ ] Implement HashTags/Mentions
 - [ ] Implement Profile Updates
 - [ ] Implement Search (Users/Posts/HashTags)
 - [ ] Implement AutoComplete
