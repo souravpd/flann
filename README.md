@@ -21,7 +21,7 @@ Implemetation of a Social Networking Website
 - [X] Implement Image Upload
 - [X] Implement Get Single Post
 - [X] Implement Likes on Posts
-- [ ] Implement Comments on Posts
+- [X] Implement Comments on Posts
 - [ ] Implement HashTags
 - [ ] Implement Profile Updates
 - [ ] Implement Search (Users/Posts/HashTags)

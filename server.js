@@ -10,7 +10,9 @@ const usersRouter = require("./routes/users");
 const friendsRouter = require("./routes/friends");
 const graphsRouter = require("./routes/graphs");
 const postsRouter = require("./routes/posts");
+//@todo Only Likes on Posts
 const likesRouter = require("./routes/likes");
+const commentsRouter = require("./routes/comments");
 
 //Define Port
 const port = process.env.PORT;
@@ -30,7 +32,9 @@ app.use("/users", usersRouter);
 app.use("/friends", friendsRouter);
 app.use("/graphs", graphsRouter);
 app.use("/posts", postsRouter);
+//@todo Only likes on Posts
 app.use("/likes", likesRouter);
+app.use("/comments", commentsRouter);
 
 //Create the Server
 app.listen(port, function (err) {

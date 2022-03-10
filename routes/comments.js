@@ -2,7 +2,7 @@
 const express = require("express");
 
 //Local Imports
-const commentsController = require("../controller/comments_controller");
+const commentsController = require("../controllers/comments_controllers");
 const { verify_token, verify_access } = require("../utils/verify_token");
 const {
   build_graph,
@@ -25,4 +25,10 @@ router.post(
   commentsController.deleteComment
 );
 
+router.post(
+  "/getCommentsForPost",
+  verify_token,
+  commentsController.getCommentsForPost
+);
 
+module.exports = router;

@@ -25,6 +25,6 @@ router.post(
   [verify_token, build_graph, shortest_paths, load_friends, verify_access],
   likesController.unlike
 );
-router.get("/getLikes", verify_token, likesController.getLikes);
+router.post("/getLikes", verify_token, likesController.getLikes);
 
 module.exports = router;
