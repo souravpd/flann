@@ -22,10 +22,18 @@ Implemetation of a Social Networking Website
 - [X] Implement Get Single Post
 - [X] Implement Likes on Posts
 - [X] Implement Comments on Posts
-- [ ] Implement HashTags/Mentions
-- [ ] Implement Profile Updates
+- [ ] Implement User Groups
+  - [ ] Create Group
+  - [ ] Group Admin
+  - [ ] Group Member
+  - [ ] Send Request To Join Group
+  - [ ] Allow User to Join Group
+  - [ ] Group Posts
+  - [ ] Group Moderators
+- [X] Implement User Profiles
+- [ ] Implement HashTags/Mentions (Frontend)
 - [ ] Implement Search (Users/Posts/HashTags)
-- [ ] Implement AutoComplete
+- [ ] Implement AutoComplete (Frontend)
 - [ ] Implement CSRF Protection
 
 ### Databases

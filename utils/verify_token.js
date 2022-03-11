@@ -99,4 +99,29 @@ function verify_access(request, response, next) {
   );
 }
 
-module.exports = { verify_token, verify_access };
+function verify_group_access(request, response, next) {
+  let username = request.auth.username;
+  let group_id = request.body.group_id;
+  pool.query(
+    `SELECT * FROM user_group_map WHERE username=? AND group_id=?`,
+    [username, group_id],
+    async function (error, results) {
+      if (error) {
+        return response.status(400).json({
+          success: false,
+          error: error,
+          results: null,
+        });
+      } else if (results.length == 0) {
+        return response.status(400).json({
+          success: false,
+          error: error,
+          results: null,
+        });
+      } else {
+        next();
+      }
+    }
+  );
+}
+module.exports = { verify_token, verify_access, verify_group_access };
